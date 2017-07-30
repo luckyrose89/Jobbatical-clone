@@ -54,7 +54,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(paths.assets));
   app.use(express.static(paths.dist));
   app.get('/*', (req, res) => {
-    res.sendFile('index.html', { root: paths.client });
+    res.sendFile('index.html', { root: paths.dist });
   });
 
   // TODO: enable server-side rendering
