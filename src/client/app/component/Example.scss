@@ -1,0 +1,14 @@
+.example {
+  color: darken(red, 10%);
+}
+
+.button {
+  display: inline-block;
+  margin: 30px;
+  cursor: pointer;
+  transition: transform .15s cubic-bezier(0, 0, 0, 3);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
