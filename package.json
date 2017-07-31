@@ -11,14 +11,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn run clean && yarn run build:client && yarn run build:server",
+    "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack",
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js",
     "clean": "rimraf dist",
     "dev": "cross-env NODE_ENV=development node index.js",
-    "lint": "eslint src",
+    "lint": "eslint --ext .js --ext .jsx src/",
     "start": "cross-env NODE_ENV=production node index.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "dependencies": {
     "axios": "^0.16.2",
