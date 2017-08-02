@@ -1,11 +1,7 @@
 # Jobbatical-clone
-Clone the [jobbatical](https://jobbatical.com/) website as part of Chingu Voyage project
+Clone the [jobbatical](https://jobbatical.com/) website as part of [Chingu Voyage](https://github.com/Chingu-cohorts/Chingu-dev-adventures)
 
-1-Jobbatical.html contains the original site's home page source code for reference
-
-2- The index.html file contains the clone's HTML structure
-
-3- The Css folder contains bootstrap style sheets and a custom-style css
+The MERN stack (MongoDB, Express, React, Node) is used for this project with hot reloading enabled for both client side and server side modules in development
 
 ## Demo
 Coming soon
@@ -27,6 +23,11 @@ npm test              # run tests
 npm run test:watch    # run tests and watch for changes in files
 npm run test:coverage # run tests and generate coverage report
 ```
+
+## Main contributors
+- [avidrutham](https://github.com/luckyrose89)
+- [cbchien46](https://cbchien.github.io/portfolio/)
+- [ksmai](https://github.com/ksmai)
 
 ## License
 MIT
