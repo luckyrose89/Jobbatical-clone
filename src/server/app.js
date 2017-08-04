@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 
 import paths from '../../paths';
+import './auth/passport.config';
 
 // set up mongoDB connection
 mongoose.Promise = global.Promise;
@@ -26,7 +27,6 @@ mongoose
 const app = express();
 
 // set up passport
-// TODO: add some passport strategies
 const sessionConfig = {
   resave: false,
   saveUninitialized: false,
@@ -88,7 +88,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // global error handler
 // catch all errors that are not handled by individual route
-app.use((req, res, next, err) => {
+app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || err.toString();
   res.status(status).json({ error: message });

@@ -9,3 +9,6 @@ dist/
 
 # packages from npm registry
 node_modules/
+
+# sensitive data like API keys
+.env

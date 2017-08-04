@@ -7,6 +7,11 @@ The MERN stack (MongoDB, Express, React, Node) is used for this project with hot
 Coming soon
 
 ## Development
+
+### Configurations
+Since this application supports login using Facebook/Google accounts, `FACEBOOK_CLIENT_ID`, `FACEBOOK_CLIENT_SECRET`, `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` need to be set as environment variables before starting the server. You can specify them in the `.env` file in development. For more details about how to obtain them, please refer to [Facebook's](https://developers.facebook.com) and [Google's](https://developers.google.com/identity/sign-in/web/devconsole-project) website
+
+### Scripts
 ```
 npm run build:client  # build the client app for production
 npm run build:server  # build the server app for production
