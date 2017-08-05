@@ -5,16 +5,9 @@ import compression from 'compression';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 import passport from 'passport';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
 
 import paths from '../../paths';
 import './auth/passport.config';
-
-const api = require('./routes/api');
-const index = require('./routes/index');
-
 
 // set up mongoDB connection
 mongoose.Promise = global.Promise;
@@ -98,14 +91,8 @@ if (process.env.NODE_ENV === 'production') {
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || err.toString();
-  res.status(status).json({ error: 'message' });
+  res.status(status).json({ error: message });
 });
-
-app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-app.use('/api', api);
-
 
 // create the server
 const PORT = process.env.PORT || 3000;

@@ -23,16 +23,6 @@ function Example({ onDec, onInc, num }) {
       <span>{num}</span>
       <button className={styles.button} onClick={onInc}>+</button>
       <a href="/api/v1/example">Example API route</a>
-
-      <h1>Create User</h1>
-
-      <form action='/api/user' method="post">
-        <input type="text" name="profile.username" placeholder="username" /><br/>
-        <input type="text" name="profile.picture" placeholder="http://google.com" /><br/>
-        <input type="text" name="data.oauth" value="dummyoauth" />
-
-        <input type="submit" value="Create User" />
-      </form>
     </div>
   );
 }
