@@ -76,7 +76,10 @@ if (process.env.NODE_ENV === 'production') {
   const watcher = chokidar.watch(paths.server);
   watcher.on('ready', () => {
     watcher.on('all', () => {
-      console.log('Clearing /server/ module cache');
+      console.log('Clearing /server/ module cache and mongoose cache');
+      mongoose.models = {};
+      mongoose.connection.collections = {};
+      mongoose.modelSchemas = {};
       Object.keys(require.cache).forEach((id) => {
         if (/[\\\/]server[\\\/]/.test(id)) {
           delete require.cache[id];
