@@ -16,8 +16,7 @@ var UserSchema = new mongoose.Schema({
 	},
 	data: {
 		oauth: { 
-			type: String,
-			required: true
+			type: String
 		},
 		applied: [{
 	      job: {
