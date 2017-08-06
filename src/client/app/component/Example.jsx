@@ -23,12 +23,34 @@ function Example({ onDec, onInc, num }) {
       <span>{num}</span>
       <button className={styles.button} onClick={onInc}>+</button>
       <a href="/api/v1/example">Example API route</a>
+      <br/>
+      <p>Use the following form to test create new user/job/category</p>
       <form action='/api/user' method="post">
         <input type="text" name="profile.username" placeholder="username" /><br/>
-        <input type="text" name="profile.picture" placeholder="http://google.com" />
+        <input type="text" name="profile.picture" placeholder="http://google.com" /><br/>
         <input type="text" name="data.oauth" value="dummyoauth" />
         <input type="submit" value="Create User" />
       </form>
+      <br/>
+      <form action='/api/job' method="post">
+        <input type="text" name="job.name" placeholder="username" /><br/>
+        <input type="text" name="job.pictures" placeholder="http://testjobpost.com" /><br/>
+        <input type="text" name="job.description" placeholder="description" /><br/>
+        <input type="text" name="job.category" placeholder="category (designer...)" />
+        <input type="submit" value="Create Job" />
+      </form>
+      <br/>
+      <form action='/api/category' method="post">
+        <input type="text" name="category.region" placeholder="region" /><br/>
+        <input type="text" name="category.keyword" value="dummyoauth" />
+        <input type="submit" value="Create Category" />
+      </form>
+      <p>Use the following api to see data in database</p>
+      <ul>
+        <li>/api/user</li>
+        <li>/api/job</li>
+        <li>/api/category</li>
+      </ul>
     </div>
   );
 }
