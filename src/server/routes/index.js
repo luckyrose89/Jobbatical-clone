@@ -1,9 +1,11 @@
 import express from 'express';
 
 import authRouter from './auth';
+import api from './api';
 
 const router = express.Router();
 router.use('/auth', authRouter);
+router.use('/api', api);
 
 router.get('/api/v1/example', (req, res) => res.send(`
   Try to edit this message in /src/server/routes/index.js
