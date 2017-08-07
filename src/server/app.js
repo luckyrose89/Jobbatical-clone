@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
