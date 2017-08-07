@@ -24,7 +24,7 @@ var UserSchema = new mongoose.Schema({
 			//facebook, google, local
 			type: String,
 			required: true
-		}
+		},
 		displayName: { 
 			type: String,
 			required: true
