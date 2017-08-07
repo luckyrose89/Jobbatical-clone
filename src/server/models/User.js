@@ -16,8 +16,22 @@ var UserSchema = new mongoose.Schema({
 	},
 	data: {
 		oauth: { 
+			//social media ID
 			type: String,
 			required: true
+		},
+		loginMethod: { 
+			//facebook, google, local
+			type: String,
+			required: true
+		}
+		displayName: { 
+			type: String,
+			required: true
+		},
+		email: { 
+			//maybe a way to hash before storing into db
+			type: String
 		},
 		applied: [{
 	      job: {
