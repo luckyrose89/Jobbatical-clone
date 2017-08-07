@@ -33,7 +33,7 @@ function Example({ onDec, onInc, num }) {
       </form>
       <br/>
       <form action='/api/job' method="post">
-        <input type="text" name="job.name" placeholder="username" /><br/>
+        <input type="text" name="job.name" placeholder="job" /><br/>
         <input type="text" name="job.pictures" placeholder="http://testjobpost.com" /><br/>
         <input type="text" name="job.description" placeholder="description" /><br/>
         <input type="text" name="job.category" placeholder="category (designer...)" />

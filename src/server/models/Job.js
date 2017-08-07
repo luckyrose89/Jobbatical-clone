@@ -7,8 +7,8 @@ var JobSchema = new mongoose.Schema({
 	    // Pictures must start with "http://"
 	    pictures: [{ type: String, match: /^http:\/\//i }],
 	    description: { type: String, required: true },
-	    category: { type: String, required: true }
-	    // category: Category.categorySchema
+	    // category: { type: String, required: true }
+	    category: Category.categorySchema
 	}
   });
 

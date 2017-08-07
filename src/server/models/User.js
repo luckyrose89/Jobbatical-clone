@@ -17,17 +17,14 @@ var UserSchema = new mongoose.Schema({
 	data: {
 		oauth: { 
 			//social media ID
-			type: String,
-			required: true
+			type: String
 		},
 		loginMethod: { 
 			//facebook, google, local
-			type: String,
-			required: true
+			type: String
 		},
 		displayName: { 
-			type: String,
-			required: true
+			type: String
 		},
 		email: { 
 			//maybe a way to hash before storing into db
