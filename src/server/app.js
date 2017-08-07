@@ -6,7 +6,6 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import passport from 'passport';
 import bodyParser from 'body-parser';
-import cors from 'cors';
 
 
 
@@ -45,7 +44,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 app.use(passport.initialize());
 app.use(passport.session());
-// app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
