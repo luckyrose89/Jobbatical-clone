@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var JobSchema = new mongoose.Schema({
 	job: {
 		name: { type: String, required: true },
-		datePosted: { type: String },
+		datePosted: { type: Date, default: Date.now },
 		hiringOrganization: {
 			name: { type: String },
 			location: {
