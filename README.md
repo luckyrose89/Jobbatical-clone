@@ -22,6 +22,7 @@ npm run dev           # start the development server
                       # environment before running this command
                       # default: mongodb://localhost:27017/jobbatical-clone
 npm run lint          # lint all source code statically
+npm run populate-db   # populate mongodb with demo data
 npm start             # start the production server
                       # need to build first
 npm test              # run tests
