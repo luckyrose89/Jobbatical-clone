@@ -36,7 +36,8 @@ function Example({ onDec, onInc, num }) {
         <input type="text" name="job.name" placeholder="job" /><br/>
         <input type="text" name="job.pictures" placeholder="http://testjobpost.com" /><br/>
         <input type="text" name="job.description" placeholder="description" /><br/>
-        <input type="text" name="job.category" placeholder="category (designer...)" />
+        <input type="text" name="job.category.keyword" placeholder="category keyword (designer...)" /><br/>
+        <input type="text" name="job.category.region" placeholder="region" value="Region default" />
         <input type="submit" value="Create Job" />
       </form>
       <br/>
