@@ -2,7 +2,7 @@ var Category = require('./Category');
 var mongoose = require('mongoose');
 
 var JobSchema = new mongoose.Schema({
-	job: {
+
 		name: { type: String, required: true },
 		datePosted: { type: Date, default: Date.now },
 		hiringOrganization: {
@@ -28,11 +28,11 @@ var JobSchema = new mongoose.Schema({
         industry: { type: String },
         responsibilities: { type: String }, 
         qualifications: { type: String },
-        validThrough: { type: String }
-	}
+        validThrough: { type: String, default: new Date(+new Date() + 90*24*60*60*1000) }
+
   });
 
-module.exports = mongoose.model('JobSchema', JobSchema);
+module.exports = mongoose.model('Job', JobSchema);
 // module.exports.index({ name: 'text' });
 
 // module.exports.set('toObject', { virtuals: true });

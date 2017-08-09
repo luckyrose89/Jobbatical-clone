@@ -16,6 +16,6 @@ var categorySchema = new mongoose.Schema({
 });
 
 // Parameters are: model name, schema, 'collection name'
-module.exports = mongoose.model('categorySchema', categorySchema);
+module.exports = mongoose.model('category', categorySchema);
 
 module.exports.categorySchema = categorySchema;
