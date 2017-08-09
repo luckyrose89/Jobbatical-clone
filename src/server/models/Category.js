@@ -8,11 +8,11 @@ var categorySchema = new mongoose.Schema({
     type: String,
     ref: 'Category'
   },
-  keyword: [{
+  keyword: {
     // designer, engineer, web, data, creativity, wordpress, etc
-    type: String,
+    type: Array,
     ref: 'Category'
-  }]
+  }
 });
 
 // Parameters are: model name, schema, 'collection name'

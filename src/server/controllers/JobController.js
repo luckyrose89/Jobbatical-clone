@@ -23,6 +23,13 @@ module.exports = {
 	},
 
 	create: function(params, callback){
+		var keywords = params['category.keyword']
+		var keyword = keywords.split(',')
+		var newKeywords = []
+		keyword.forEach(function(thiskeyword){
+			newKeywords.push(thiskeyword.trim())
+		})
+		params['category.keyword'] = newKeywords
 		Job.create(params, function(err, job){
 			if (err){
 				callback(err, null)
