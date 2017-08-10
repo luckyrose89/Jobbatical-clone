@@ -67,6 +67,35 @@ router.get('/:resource/:id', function(req, res, next){
 	})
 })
 
+router.get('/:resource/region/:id', function(req, res, next){
+	var resource = req.params.resource;
+	var id = req.params.id;
+
+	var controller = controllers[resource]
+	if (controller == null){
+	res.json({
+		confirmation: 'fail',
+		message: 'Invalid api resource request: ' + resource
+	})
+
+	return
+	}
+
+	controller.find({ "category.region" : id }, function(err, result){
+		if (err){
+			res.json({
+				confirmation: 'fail',
+				message: 'Id Not Found'
+			})
+			return
+		}
+		res.json({
+			confirmation: 'success',
+			result: result
+		})
+	})
+})
+
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource
 	var controller = controllers[resource]
