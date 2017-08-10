@@ -9,6 +9,7 @@ var User = require('../models/User');
 // import controller from //controllers/index.js which contains all controllers
 var controllers = require('../controllers')
 
+// List all by resource type
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource;	
 	var controller = controllers[resource]
@@ -38,6 +39,7 @@ router.get('/:resource', function(req, res, next){
 	})
 })
 
+// Find by id in resource type
 router.get('/:resource/:id', function(req, res, next){
 	var resource = req.params.resource;
 	var id = req.params.id;
@@ -67,6 +69,7 @@ router.get('/:resource/:id', function(req, res, next){
 	})
 })
 
+// Query find by region. Mainly for Jobs.
 router.get('/:resource/region/:id', function(req, res, next){
 	var resource = req.params.resource;
 	var id = req.params.id;
@@ -81,7 +84,7 @@ router.get('/:resource/region/:id', function(req, res, next){
 	return
 	}
 
-	controller.find({ "category.region" : id }, function(err, result){
+	controller.find({ "category.region" : new RegExp("^" + id, "i") }, function(err, result){
 		if (err){
 			res.json({
 				confirmation: 'fail',
@@ -96,6 +99,36 @@ router.get('/:resource/region/:id', function(req, res, next){
 	})
 })
 
+// Query find by keyword. Mainly for Jobs.
+router.get('/:resource/keyword/:id', function(req, res, next){
+	var resource = req.params.resource;
+	var id = req.params.id;
+
+	var controller = controllers[resource]
+	if (controller == null){
+	res.json({
+		confirmation: 'fail',
+		message: 'Invalid api resource request: ' + resource
+	})
+
+	return
+	}
+	controller.find({ "category.keyword" : new RegExp("^" + id, "i") }, function(err, result){
+		if (err){
+			res.json({
+				confirmation: 'fail',
+				message: 'Id Not Found'
+			})
+			return
+		}
+		res.json({
+			confirmation: 'success',
+			result: result
+		})
+	})
+})
+
+// Create by resource type
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource
 	var controller = controllers[resource]
