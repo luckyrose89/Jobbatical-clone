@@ -30,6 +30,13 @@ npm run test:watch    # run tests and watch for changes in files
 npm run test:coverage # run tests and generate coverage report
 ```
 
+### APIs
+```
+api/job                   # list all jobs
+api/job/keyword/:keyword  # list jobs matching keyword(engineer, designer, etc...)
+api/job/region/:region    # list jobs matching region(Asia, North Amercia, etc...)
+```
+
 ## Main contributors
 - [avidrutham](https://github.com/luckyrose89)
 - [cbchien46](https://cbchien.github.io/portfolio/)
