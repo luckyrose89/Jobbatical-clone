@@ -22,11 +22,19 @@ npm run dev           # start the development server
                       # environment before running this command
                       # default: mongodb://localhost:27017/jobbatical-clone
 npm run lint          # lint all source code statically
+npm run populate-db   # populate mongodb with demo data
 npm start             # start the production server
                       # need to build first
 npm test              # run tests
 npm run test:watch    # run tests and watch for changes in files
 npm run test:coverage # run tests and generate coverage report
+```
+
+### APIs
+```
+api/job                   # list all jobs
+api/job/keyword/:keyword  # list jobs matching keyword(engineer, designer, etc...)
+api/job/region/:region    # list jobs matching region(Asia, North Amercia, etc...)
 ```
 
 ## Main contributors

@@ -17,6 +17,7 @@
     "clean": "rimraf dist",
     "dev": "cross-env NODE_ENV=development node index.js",
     "lint": "eslint --ext .js --ext .jsx src/",
+    "populate-db": "node scripts/populate-db.js",
     "start": "cross-env NODE_ENV=production node index.js",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
