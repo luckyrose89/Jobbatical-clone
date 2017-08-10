@@ -14,7 +14,7 @@ module.exports = [
     pictures: ['http://pic.chingu-hospital.org/abc.jpg'],
     description: 'We are looking for full-time nurses to assist in daily health care of chingus. Chingus are rich so there will be attractive compensation packages!',
     category: {
-      region: 'California',
+      region: 'North America',
       keyword: [
         'Nursing',
         'Hospital',
@@ -47,7 +47,7 @@ module.exports = [
     pictures: ['http://evil.com/evil.jpg'],
     description: 'We want capable programmers that know javascript, nodejs, php, angular, react, vue, ruby on rails, java, photoshop, illustrator, perl, c++, rust, elixir and rocket science. We will be offering at least minimum wage of course. We need you to work 7 days a week.',
     category: {
-      region: 'Evil Region',
+      region: 'North America',
       keyword: [
         'Programmer',
         'Tech',
@@ -80,7 +80,7 @@ module.exports = [
     pictures: ['http://some-host.com/some-pic.jpg'],
     description: 'Manage business requirements, quality control, cost and timeline of our awesome projects',
     category: {
-      region: 'Big Region',
+      region: 'Asia',
       keyword: [
         'Big',
         'BigBig',
@@ -113,7 +113,7 @@ module.exports = [
     pictures: ['http://foo.university.edu/pic'],
     description: 'Professor Bar needs a smart assistant for his project in quantun mechanics!',
     category: {
-      region: 'Foo Region',
+      region: 'Asia',
       keyword: [
         'Research',
         'Physics',
@@ -178,7 +178,7 @@ module.exports = [
     pictures: ['http://money.money/money.jpg'],
     description: 'This position assists us in our financial analysis',
     category: {
-      region: 'Hong Kong',
+      region: 'Asia',
       keyword: [
         '$',
         '$$',
@@ -211,7 +211,7 @@ module.exports = [
     pictures: ['http://xyzsurvey.org/ourpic'],
     description: 'Insert some surveying description here',
     category: {
-      region: 'Shanghai',
+      region: 'Asia',
       keyword: [
         'Surveying',
       ],
@@ -242,7 +242,7 @@ module.exports = [
     pictures: ['http://pic.abc-bus.com/awesomepic.jpg'],
     description: 'Just some driving',
     category: {
-      region: 'Taiwan',
+      region: 'Asia',
       keyword: [
         'Bus',
         'Driving',
@@ -275,7 +275,7 @@ module.exports = [
     pictures: ['http://secret.alien/secret.jpg'],
     description: 'Be brave, and save the world. We will provide all necessary training and equipments.',
     category: {
-      region: 'Earth',
+      region: 'North America',
       keyword: [
         'Superhero',
         'Marvel',
@@ -308,7 +308,7 @@ module.exports = [
     pictures: ['http://google.com/'],
     description: 'Bake something',
     category: {
-      region: 'Bangkok',
+      region: 'Asia',
       keyword: [
         'food',
       ],
@@ -339,7 +339,7 @@ module.exports = [
     pictures: ['http://pic.police.gov.uk/pic'],
     description: 'Arrest that bad guy',
     category: {
-      region: 'London',
+      region: 'Europe',
       keyword: [
         'Government',
         'Police',
@@ -372,7 +372,7 @@ module.exports = [
     pictures: ['http://www.webdev.com/pic/arvavbrb.jpg'],
     description: 'Our current web pages look like crap drawn by 3-year-old kids. Come and redesign for us!',
     category: {
-      region: 'New Delhi',
+      region: 'Asia',
       keyword: [
         'design',
         'webdev',
@@ -405,7 +405,7 @@ module.exports = [
     pictures: ['http://nike.fake/a.jpg'],
     description: 'Perform day-to-day operation for our wonderful store',
     category: {
-      region: 'Tokyo',
+      region: 'Asia',
       keyword: [
         'Retail',
         'Management',
@@ -422,7 +422,7 @@ module.exports = [
     industry: 'Retail',
     responsibilities: 'Sell shoes', 
     qualifications: 'none',
-    validThrough: '2016-06-01T03:00:00Z',
+    validThrough: '2018-06-01T03:00:00Z',
   }, {
     _id: '598ad38a24ac38de5c40a80a',
     name: 'Astronaut',
@@ -438,7 +438,7 @@ module.exports = [
     pictures: ['http://space.program.ru/a-picture-of-moon.jpg'],
     description: 'The Earth is dying! We need to send some astronaut to Mars and build our cities there!',
     category: {
-      region: 'Mars',
+      region: 'North America',
       keyword: [
         'mars',
         'space',
@@ -470,7 +470,7 @@ module.exports = [
     pictures: ['http://www.somedomain.po/international.jpeg'],
     description: 'Join our law team today at International Firm!',
     category: {
-      region: 'Warsaw',
+      region: 'Europe',
       keyword: [
         'Law',
       ],
@@ -485,6 +485,512 @@ module.exports = [
     industry: 'Legal',
     responsibilities: 'Do some legal/illegal stuffs', 
     qualifications: 'Some law certificates',
-    validThrough: '2019-11-11T11:11:11Z',
+    validThrough: '2018-11-11T11:11:11Z',
   },
+  {
+    _id: '598bb13dd1251121916f5bfc',
+    name: 'UI Designer',
+    datePosted: 1570583349000,
+    hiringOrganization: {
+      name: 'Sweat Designer Shop',
+      location: {
+        addressCity: 'Ho Chi Minh City',
+        addressRegion: 'Asia',
+        addressCountry: 'Vietnam',
+      },
+    },
+    pictures: ['http://www.sweat.shop/international.jpeg'],
+    description: 'We will give you all the hours you wanted to work!',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'UI',
+        'Designer',
+        'Asia',
+      ],
+    },
+    incentiveCompensation: 'unlimited hours and overtime',
+    jobLocation: {
+      addressCity: 'Ho Chi Minh City',
+      addressRegion: 'Asia',
+      addressCountry: 'Vietnam'
+    },
+    employmentType: 'full-time',
+    industry: 'Tech',
+    responsibilities: 'Create some amazing things', 
+    qualifications: '3 years proven track of willingness to work overtime',
+    validThrough: '2017-11-15T11:11:11Z',
+  },
+  {
+    _id: '598bb13f1d2bf18342968358',
+    name: 'Personal Assistant',
+    datePosted: 1570583349000,
+    hiringOrganization: {
+      name: 'Pink Peach',
+      location: {
+        addressCity: 'Johor Bahru',
+        addressRegion: 'Asia',
+        addressCountry: 'Malaysia',
+      },
+    },
+    pictures: ['http://www.pinkpeach.com/international.jpeg'],
+    description: 'Provide our VIP customers with speacial care!',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Assistant',
+        'Office',
+      ],
+    },
+    incentiveCompensation: 'The undescribale satisfication',
+    jobLocation: {
+      addressCity: 'Johor Bahru',
+      addressRegion: 'Asia',
+      addressCountry: 'Malaysia'
+    },
+    employmentType: 'full-time',
+    industry: 'Healthcare',
+    responsibilities: 'Respond to customer"s requests', 
+    qualifications: 'No boundaries',
+    validThrough: '2017-11-20T11:11:11Z',
+  },
+    {
+    _id: '598bb13ffc028b376eb9f8ad',
+    name: 'Apple Picker',
+    datePosted: 1570583349000,
+    hiringOrganization: {
+      name: 'Big Ranch',
+      location: {
+        addressCity: 'Houston',
+        addressRegion: 'Texas',
+        addressCountry: 'United States',
+      },
+    },
+    pictures: ['http://www.pinkpeach.com/international.jpeg'],
+    description: 'Provide our VIP customers with speacial care!',
+    category: {
+      region: 'North America',
+      keyword: [
+        'Assistant',
+        'Ranch',
+        'Picker'
+      ],
+    },
+    incentiveCompensation: 'All-you-can eat apples',
+    jobLocation: {
+      addressCity: 'Houston',
+      addressRegion: 'Texas',
+      addressCountry: 'United States'
+    },
+    employmentType: 'full-time',
+    industry: 'Agriculture',
+    responsibilities: 'Responsible to complete morning shift and pick about 500 apples', 
+    qualifications: 'steady hands',
+    validThrough: '2017-10-20T11:11:11Z',
+  },
+  {
+    _id: '598bb1408ca9843c4f9e6009',
+    name: 'iOS Developer',
+    datePosted: 1570583349000,
+    hiringOrganization: {
+      name: 'Big Bros',
+      location: {
+        addressCity: 'Chiang Mai',
+        addressRegion: 'Asia',
+        addressCountry: 'Thailand',
+      },
+    },
+    pictures: ['http://www.bigbros.com/main.jpeg'],
+    description: 'Provide our VIP customers with speacial care!',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'iOS',
+        'Developer',
+        'Tech'
+      ],
+    },
+    incentiveCompensation: 'All-you-can eat apples',
+    jobLocation: {
+      addressCity: 'Chiang Mai',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'full-time',
+    industry: 'Tech',
+    responsibilities: 'Responsible for building exciting applications and implementing flows and mockups provided by UX and Design teams.', 
+    qualifications: 'You have experience with Cocoa Touch, Objective-C, and Swift.',
+    validThrough: '2017-12-20T11:11:11Z',
+  },
+  {
+    _id: '598bb1411d2360d28f666eb3',
+    name: 'Ant Keeper',
+    datePosted: 1491667200000,
+    hiringOrganization: {
+      name: 'Ant Nation',
+      location: {
+        addressCity: 'Ko Samui',
+        addressRegion: 'Asia',
+        addressCountry: 'Thailand',
+      },
+    },
+    pictures: ['http://www.antnation.com/main.jpeg'],
+    description: 'Help us name all our ants!',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Keeper',
+        'Worker',
+        'Speacial'
+      ],
+    },
+    incentiveCompensation: 'Design your own antman costumes',
+    jobLocation: {
+      addressCity: 'Ko Samui',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'full-time',
+    industry: 'Agriculture',
+    responsibilities: 'Responsible for create a unique naming system for our ants', 
+    qualifications: 'You are detail focused and are excited about ants.',
+    validThrough: '2017-12-10T11:11:11Z',
+  },
+  {
+    _id: '598bb1424a71ecf5b5f1f034',
+    name: 'Personal Shopper',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'We Shop For You',
+      location: {
+        addressCity: 'Phuket',
+        addressRegion: 'Asia',
+        addressCountry: 'Thailand',
+      },
+    },
+    pictures: ['http://www.antnation.com/main.jpeg'],
+    description: 'Do you want to try on cloths for other can get paid? Do not miss this opportunity',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Shopper',
+        'Worker',
+        'Speacial'
+      ],
+    },
+    incentiveCompensation: 'On top of your salary, you will have the opportunity to earn free cloths and shoes',
+    jobLocation: {
+      addressCity: 'Phuket',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'Part-time',
+    industry: 'Fashion',
+    responsibilities: 'Responsible for trying on cloths and demo for customers', 
+    qualifications: 'Your body size are 175cm tall and around 65kg.',
+    validThrough: '2017-12-10T11:11:11Z',
+  },
+  {
+    _id: '598bba6ca7967b6c9487600b',
+    name: 'Data Processing Specialist',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Engfish',
+      location: {
+        addressCity: 'Taipei',
+        addressRegion: 'Asia',
+        addressCountry: 'Taiwan',
+      },
+    },
+    pictures: ['http://www.engfish.com/fish.jpeg'],
+    description: 'As part of our enthusiastic young team, you will mainly be taking on various responsibilities related to database management.',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Teacher',
+        'English',
+        'Data'
+      ],
+    },
+    incentiveCompensation: 'On top of your salary, you will get free laptop.',
+    jobLocation: {
+      addressCity: 'Taipei',
+      addressRegion: 'Asia',
+      addressCountry: 'Taiwan'
+    },
+    employmentType: 'Part-time',
+    industry: 'Higher Education',
+    responsibilities: 'Researching and collecting online information', 
+    qualifications: 'Fluent in English, with some knowledge of Spanish, French, or German.',
+    validThrough: '2017-12-10T11:11:11Z',
+  },
+  {
+    _id: '598bba6d5f1c4f36c179f962',
+    name: 'Digital Designer',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'ABCDigital',
+      location: {
+        addressCity: 'Ko Samui',
+        addressRegion: 'Asia',
+        addressCountry: 'Thailand',
+      },
+    },
+    pictures: ['http://www.abcdigital.com/information.jpeg'],
+    description: 'If you a graphic designer who loves exploring and pushing the boundaries of digital creative, you can be a perfect fit!',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Designer',
+        'tech'
+      ],
+    },
+    incentiveCompensation: 'Stock options in an early stage start-up with a lot of growth potential.',
+    jobLocation: {
+      addressCity: 'Ko Samui',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'full-time',
+    industry: 'Tech',
+    responsibilities: 'You will work in collaboration with our lead designer on projects for different teams such as marketing, product development, talent acquisition and more.', 
+    qualifications: 'You have a graphic design qualification at a degree level or equivalent.',
+    validThrough: '2017-12-03T11:11:11Z',
+  },
+  {
+    _id: '598bba6e9c221e3780228707',
+    name: 'Full-Stack Developer',
+    datePosted: 1502121600000,
+    hiringOrganization: {
+      name: 'Stack Em Up',
+      location: {
+        addressCity: 'Bangkok',
+        addressRegion: 'Asia',
+        addressCountry: 'Thailand',
+      },
+    },
+    pictures: ['http://www.stackemup.com/profile.jpeg'],
+    description: 'o you have previous programming experience? Want to work at a fast-growing startup? We are looking for a full-stack developer to join our growing team.',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Developer',
+        'full-stack',
+        'Engineer',
+        'startup'
+      ],
+    },
+    incentiveCompensation: 'Flexible working hours',
+    jobLocation: {
+      addressCity: 'Bangkok',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'Full-time',
+    industry: 'Tech',
+    responsibilities: 'Write high-quality, robust code that will scale with the business', 
+    qualifications: 'React/Vue.js, Node.js, Express, Three.js, WebSockets',
+    validThrough: '2017-11-10T11:11:11Z',
+  },
+  {
+    _id: '598bba6ef5fff907db240dbb',
+    name: 'Back-End Developer',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Server Pro',
+      location: {
+        addressCity: 'Hong Kong',
+        addressRegion: 'Asia',
+        addressCountry: 'Hong Kong',
+      },
+    },
+    pictures: ['http://www.serverpro.com/pro.jpeg'],
+    description: 'Do you like to work on a team, to inspire and help others?',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Developer',
+        'Back-End',
+        'Engineer'
+      ],
+    },
+    incentiveCompensation: 'Apply and let us discuss your salary and benefits! We will help you with you visa/work permit.',
+    jobLocation: {
+      addressCity: 'Hong Kong',
+      addressRegion: 'Asia',
+      addressCountry: 'Hong Kong'
+    },
+    employmentType: 'full-time',
+    industry: 'Tech',
+    responsibilities: 'work as a key person in our engineering team to architect and develop back-end and back-office software for mobile applications.', 
+    qualifications: 'Communication skills and fluency in English. Programming skills in Java, JS, Python, PHP and in related languages',
+    validThrough: '2018-01-10T11:11:11Z',
+  },
+  {
+    _id: '598bba6e3f9c062825a17641',
+    name: 'DevOps Engineer',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Fish and Chippering',
+      location: {
+        addressCity: 'Busan',
+        addressRegion: 'Asia',
+        addressCountry: 'Korea',
+      },
+    },
+    pictures: ['http://www.fishandchippering.com/main.jpeg'],
+    description: 'We have amazing dedicated colleagues, great benefits, and an exciting international workplace.',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Engineer',
+        'DevOps',
+        'Fish'
+      ],
+    },
+    incentiveCompensation: 'On top of your salary, We will help you with work permit paperwork',
+    jobLocation: {
+      addressCity: 'Phuket',
+      addressRegion: 'Asia',
+      addressCountry: 'Thailand'
+    },
+    employmentType: 'Part-time',
+    industry: 'Agriculture',
+    responsibilities: 'You will work closely with your fellow developers in operations and development to ensure the stability and maintainability of the system and infrastructure.', 
+    qualifications: 'You have experience deploying, monitoring and managing large systems. You have 5+ years experience with Linux in server environments.',
+    validThrough: '2017-11-20T11:11:11Z',
+  },
+  {
+    _id: '598bba6fb508d56360745dea',
+    name: 'Bee Keeper',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Pro BeeZee',
+      location: {
+        addressCity: 'Portland',
+        addressRegion: 'Oregon',
+        addressCountry: 'United States',
+      },
+    },
+    pictures: ['http://www.probeezee.com/main.jpeg'],
+    description: 'Fresh honey? Why not?',
+    category: {
+      region: 'North America',
+      keyword: [
+        'Keeper',
+        'Worker',
+        'Speacial'
+      ],
+    },
+    incentiveCompensation: 'Fly with our bees. Harvest our honey',
+    jobLocation: {
+      addressCity: 'Portland',
+      addressRegion: 'Oregon',
+      addressCountry: 'United States'
+    },
+    employmentType: 'full-time',
+    industry: 'Agriculture',
+    responsibilities: 'Responsible for daily routine and cleaning', 
+    qualifications: 'You love honey and would like to get a honey',
+    validThrough: '2017-12-31T11:11:11Z',
+  },
+  {
+    _id: '598bba6f80812085d97b3dec',
+    name: 'Data Scientist',
+    datePosted: 1491667200000,
+    hiringOrganization: {
+      name: 'Invalidata',
+      location: {
+        addressCity: 'Prague',
+        addressRegion: 'Prague',
+        addressCountry: 'Czechia',
+      },
+    },
+    pictures: ['http://www.antnation.com/main.jpeg'],
+    description: 'Your mission as part of our team will be to evaluate and train algorithms, gather ground-truth data, and maintain the integrity of our data.',
+    category: {
+      region: 'Europe',
+      keyword: [
+        'Data',
+        'Data Scientist'
+      ],
+    },
+    incentiveCompensation: 'On top of your salary, you will have access to our world class video game room',
+    jobLocation: {
+      addressCity: 'Prague',
+      addressRegion: 'Prague',
+      addressCountry: 'Czechia'
+    },
+    employmentType: 'full-time',
+    industry: 'Tech',
+    responsibilities: 'Designing benchmarks and tests to evaluate algorithms', 
+    qualifications: 'Strong research/academic skills',
+    validThrough: '2017-12-10T11:11:11Z',
+  },
+  {
+    _id: '598bba70c439685f3cf5b0d1',
+    name: 'Water Boy',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Next Champion High School',
+      location: {
+        addressCity: 'Oaxaca',
+        addressRegion: 'Oaxaca',
+        addressCountry: 'Mexcio',
+      },
+    },
+    pictures: ['http://www.ncgs.com/champion.jpeg'],
+    description: 'Are you the water boy who brings together the team?',
+    category: {
+      region: 'Central America',
+      keyword: [
+        'Shopper',
+        'Worker',
+        'Speacial'
+      ],
+    },
+    incentiveCompensation: 'On top of your salary, you will have a set of champion freebies',
+    jobLocation: {
+      addressCity: 'Oaxaca',
+      addressRegion: 'Oaxaca',
+      addressCountry: 'Mexcio'
+    },
+    employmentType: 'Part-time',
+    industry: 'Sports',
+    responsibilities: 'Responsible for cheering the team up', 
+    qualifications: 'You can mix some special water.',
+    validThrough: '2017-12-10T11:11:11Z',
+  },
+  {
+    _id: '598bba7014c85129dca69cc3',
+    name: 'Head of Product',
+    datePosted: 1502267722090,
+    hiringOrganization: {
+      name: 'Product Head',
+      location: {
+        addressCity: 'Yokohoma',
+        addressRegion: 'Yokohoma',
+        addressCountry: 'Japan',
+      },
+    },
+    pictures: ['http://www.producthead.com/main.jpeg'],
+    description: 'Working closely with our Business Development, Sales and IT teams, you will help plan, prioritize and manage the flow of requirements and tasks across the entire product development pipeline.',
+    category: {
+      region: 'Asia',
+      keyword: [
+        'Product'
+      ],
+    },
+    incentiveCompensation: 'Employee referral bonus.',
+    jobLocation: {
+      addressCity: 'Yokohoma',
+      addressRegion: 'Yokohoma',
+      addressCountry: 'Japan'
+    },
+    employmentType: 'Part-time',
+    industry: 'Healthcare',
+    responsibilities: 'Work alongside Business Development and Sales teams to pool insights, feedback and learnings.', 
+    qualifications: 'You are skilled at product management, requirement analysis, competitive analysis, pricing strategy, budgeting and financial planning.',
+    validThrough: '2017-12-10T11:11:11Z',
+  }
 ];
