@@ -8,7 +8,7 @@ import styles from './InputPage.scss';
 function Example({ onDec, onInc, num }) {
   return (
     <div>
-      <h1 className={styles.example}>Hello, team bears-8!</h1>
+      <h1 className={styles.example}>Hello, team bears-8!</h1><a href="/example">Back to Main</a>
       <p>Use the following form to test create new user/job</p>
 
       <form action='/api/job' method="post">
@@ -31,7 +31,17 @@ function Example({ onDec, onInc, num }) {
         <input className={styles.inputBox} type="text" name="qualifications" placeholder=" qualifications" /><br/>
         <input className={styles.inputBox} className={styles.submit} type="submit" value="Create Job" />
       </form>
+      <p>Use the following to create/update user</p>
+      <form action='/api/user' method="post">
+        <input className={styles.inputBox} type="text" name="profile[username]" placeholder=" username" /><br/>
+        <input className={styles.inputBox} type="text" name="data[oauth]" placeholder=" oauth" /><br/>
+        <input className={styles.inputBox} type="text" name="data[displayName]" placeholder=" displayName"/> <br/>
+        <input className={styles.inputBox} className={styles.submit} type="submit" value="Update User" />
+      </form>
+
       <p>Use the following api to see data in database</p>
+
+
       <ul>
         <li>/api/user</li>
         <li>/api/job</li>

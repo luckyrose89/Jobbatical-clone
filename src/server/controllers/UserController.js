@@ -22,8 +22,8 @@ module.exports = {
 		})
 	},
 
-	create: function(params, callback){
-		User.create(params, function(err, user){
+	findOneAndUpdate: function(id, params, callback){
+		User.findOneAndUpdate({"data.oauth":id} , (params), { upsert: true, new: true }, function(err, user){
 			if (err){
 				callback(err, null)
 				return

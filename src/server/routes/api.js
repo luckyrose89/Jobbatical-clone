@@ -20,7 +20,6 @@ router.get('/:resource', function(req, res, next){
 			message: 'Invalid api resource request: ' + resource,
 			avaiableResources: 'job, user, category'
 		})
-
 		return
 	}
 
@@ -32,10 +31,8 @@ router.get('/:resource', function(req, res, next){
 				})
 			return;
 		}
-		res.json({ 
-			confirmation: 'success',
-			resource: results
-		})
+		// res.json({ confirmation: 'success',resource: results })
+		res.json(results)
 	})
 })
 
@@ -62,14 +59,11 @@ router.get('/:resource/:id', function(req, res, next){
 			})
 			return
 		}
-		res.json({
-			confirmation: 'success',
-			result: result
-		})
+		res.json(result)
 	})
 })
 
-// Query find by region. Mainly for Jobs.
+// Query region. Mainly for Jobs.
 router.get('/:resource/region/:id', function(req, res, next){
 	var resource = req.params.resource;
 	var id = req.params.id;
@@ -92,14 +86,11 @@ router.get('/:resource/region/:id', function(req, res, next){
 			})
 			return
 		}
-		res.json({
-			confirmation: 'success',
-			result: result
-		})
+		res.json(result)
 	})
 })
 
-// Query find by keyword. Mainly for Jobs.
+// Query keyword. Mainly for Jobs.
 router.get('/:resource/keyword/:id', function(req, res, next){
 	var resource = req.params.resource;
 	var id = req.params.id;
@@ -121,25 +112,28 @@ router.get('/:resource/keyword/:id', function(req, res, next){
 			})
 			return
 		}
-		res.json({
-			confirmation: 'success',
-			result: result
-		})
+		res.json(result)
 	})
 })
 
-// Create by resource type
+// Find and Update
 router.post('/:resource', function(req, res, next){
-	var resource = req.params.resource
+	var resource = req.params.resource;
+	// logic setup to read data.oauth for User model and name for Job model
+	var id = req.body.data? req.body.data.oauth : req.body.name;
+	console.log("resource ", resource)
+	console.log("keyword ", id)
 	var controller = controllers[resource]
+	
 	if (controller == null){
-		res.json({
-			confirmation: 'fail',
-			message: 'Invalid api resource request: ' + resource
-		})
+	res.json({
+		confirmation: 'fail',
+		message: 'Invalid api resource request: ' + resource
+	})
+	return
 	}
 
-	controller.create(req.body, function(err, result){
+	controller.findOneAndUpdate(id, req.body, function(err, result){
 		if (err){
 			res.json({
 				confirmation: 'fail',
@@ -147,11 +141,7 @@ router.post('/:resource', function(req, res, next){
 			})
 			return
 		}
-
-		res.json({
-			confirmation: 'success',
-			result: result
-		})
+		res.json(result)
 	})
 })
 

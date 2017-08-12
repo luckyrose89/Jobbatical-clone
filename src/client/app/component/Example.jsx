@@ -22,17 +22,16 @@ function Example({ onDec, onInc, num }) {
       <button className={styles.button} onClick={onDec}>-</button>
       <span>{num}</span>
       <button className={styles.button} onClick={onInc}>+</button>
-      <a href="/api/v1/example">Example API route</a>
       <br/>
       <p>Use the following path to create new user/job</p>
       <ul>
-        <li>/input</li>
+        <li><a href="/input">/input</a></li>
       </ul>
-      <p>Use the following api to see data in database</p>
+      <p>Use the following API route to see data in database</p>
       <ul>
-        <li>/api/user</li>
-        <li>/api/job</li>
-        <li>/api/category</li>
+        <li><a href="/api/user">/api/user</a></li>
+        <li><a href="/api/job">/api/job</a></li>
+        <li><a href="/api/category">/api/category</a></li>
       </ul>
     </div>
   );

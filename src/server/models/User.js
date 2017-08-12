@@ -4,7 +4,6 @@ var UserSchema = new mongoose.Schema({
 	profile: {
 		username: {
 			type: String,
-			required: true,
 			unique: true,
 			lowercase: true
 		}, 
@@ -16,8 +15,9 @@ var UserSchema = new mongoose.Schema({
 	},
 	data: {
 		oauth: { 
-			//social media ID
-			type: String
+			//social media ID or local token
+			type: String,
+			required: true
 		},
 		loginMethod: { 
 			//facebook, google, local

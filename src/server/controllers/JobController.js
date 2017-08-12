@@ -22,15 +22,21 @@ module.exports = {
 		})
 	},
 
-	create: function(params, callback){
-		var keywords = params['category.keyword']
-		var keyword = keywords.split(',')
-		var newKeywords = []
-		keyword.forEach(function(thiskeyword){
-			newKeywords.push(thiskeyword.trim())
-		})
-		params['category.keyword'] = newKeywords
-		Job.create(params, function(err, job){
+	// Use the following to create and/or update
+	findOneAndUpdate: function(key, params, callback){
+		// following lines to format keyword into [a,b,c,...] from [[a,b,c]]
+		try {
+	 		var keywords = params['category.keyword']
+			var keyword = keywords.split(',')
+			var newKeywords = []
+			keyword.forEach(function(thiskeyword){
+				newKeywords.push(thiskeyword.trim())
+			})
+			params['category.keyword'] = newKeywords
+		} catch(err) {
+		}
+		// upsert to create if key not found. new:true to return updated job
+		Job.findOneAndUpdate({"name":key} , (params), { upsert: true, new: true }, function(err, job){
 			if (err){
 				callback(err, null)
 				return
