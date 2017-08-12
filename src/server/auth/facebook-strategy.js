@@ -1,6 +1,8 @@
 import passport from 'passport';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 
+import { user as userController } from '../controllers';
+
 const {
   FACEBOOK_CLIENT_ID,
   FACEBOOK_CLIENT_SECRET,
@@ -21,12 +23,28 @@ passport.use(
       profileFields: ['id', 'displayName', 'photos', 'emails'],
     },
     (accessToken, refreshToken, profile, done) => {
-      // TODO: upsert the user profile into the database
-      // when User model is ready
-      // e.g. User.findOneAndUpdate(..., { upsert: true, ... }, ...);
-      console.log(profile);
-      // TODO: request for email if we need it?
-      done(null, { _id: '123', name: 'fakeUser', type: 'facebook' });
+      const queries = {
+        'data.oauth': profile.id,
+        'data.loginMethod': 'facebook',
+      };
+
+      const updates = {
+        profile: {
+          username: profile.username || profile.displayName,
+          picture: profile.photos && profile.photos.length > 0 ?
+            profile.photos[0].value :
+            null,
+        },
+        data: {
+          oauth: profile.id,
+          loginMethod: 'facebook',
+          displayName: profile.displayName || profile.username,
+          email: profile.emails && profile.emails.length > 0 ?
+            profile.emails[0].value :
+            null,
+        },
+      };
+      userController.findOneAndUpdate(queries, updates, done);
     },
   ),
 );

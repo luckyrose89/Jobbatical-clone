@@ -1,6 +1,8 @@
 import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
+import { user as userController } from '../controllers';
+
 const {
   GOOGLE_CLIENT_ID,
   GOOGLE_CLIENT_SECRET,
@@ -21,10 +23,31 @@ passport.use(
       profileFields: ['id', 'displayName', 'photos', 'emails'],
     },
     (accessToken, refreshToken, profile, done) => {
-      // TODO: when User model is ready
-      // update/insert the record with profile data accordingly
-      console.log(profile);
-      done(null, { _id: '456', name: 'fakeUser', type: 'google' });
+      const username = profile.displayName ||
+        `${profile.name.givenName} ${profile.name.familyName}`;
+      const picture = profile.photos && profile.photos.length > 0 ?
+        profile.photos[0].value :
+        null;
+      const email = profile.emails && profile.emails.length > 0 ?
+        profile.emails[0].value :
+        null;
+
+      const updates = {
+        profile: { username, picture },
+        data: {
+          email,
+          oauth: profile.id,
+          loginMethod: 'google',
+          displayName: username,
+        },
+      };
+
+      const queries = {
+        'data.oauth': profile.id,
+        'data.loginMethod': 'google',
+      };
+
+      userController.findOneAndUpdate(queries, updates, done);
     },
   ),
 );

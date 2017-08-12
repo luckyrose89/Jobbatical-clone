@@ -1,7 +1,10 @@
+import bcrypt from 'bcrypt';
 import bodyParser from 'body-parser';
 import express from 'express';
 import passport from 'passport';
 
+import User from '../models/User';
+import { user as userController } from '../controllers';
 import {
   isUser,
   isGuest,
@@ -16,17 +19,38 @@ const jsonParser = bodyParser.json();
 
 const signup = (req, res, next) => {
   const { email, password } = req.body;
-  // TODO: create a db record with email/password
-  // login with the newly created user record and call next
-  // e.g.
-  const fakeUser = { _id: '99', name: 'hello' };
-  req.login(fakeUser, (err) => {
+  userController.find({ 'data.email': email }, (err, user) => {
     if (err) {
-      // handle error
-      return next(err);
+      err.status = 401;
+      next(err);
+      return;
     }
-
-    next();
+    if (user && user.length > 0) {
+      const e = new Error(`This email address has registered before:\n${email}`);
+      e.status = 409;
+      next(e);
+      return;
+    }
+    bcrypt
+      .hash(password, 10)
+      .then((hash) => {
+        const profile = { username: email };
+        const data = {
+          email,
+          oauth: hash,
+          loginMethod: 'local',
+        };
+        // TODO: add a user controller for creating new record
+        return User.create({ profile, data })
+      })
+      .then((user) => {
+        req.login(user, (err) => {
+          if (err) {
+            return next(err);
+          }
+          next();
+        });
+      });
   });
 };
 
@@ -71,5 +95,11 @@ router.get('/google/callback',
 router.get('/me', isUser, sendUser);
 
 router.get('/logout', isUser, logout);
+
+router.use((err, req, res, next) => {
+  const status = err.status || 401;
+  const message = err.message || err.toString();
+  res.status(status).json({ error: message });
+});
 
 export default router;

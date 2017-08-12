@@ -19,7 +19,9 @@ export function isGuest(req, res, next) {
 }
 
 export function sendUser(req, res) {
-  res.json({ user: req.user });
+  const user = req.user.toObject();
+  delete user.data.oauth;
+  res.json({ user });
 }
 
 export function logout(req, res) {
