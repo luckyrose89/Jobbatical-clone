@@ -4,12 +4,10 @@ var UserSchema = new mongoose.Schema({
 	profile: {
 		username: {
 			type: String,
-			unique: true,
-			lowercase: true
 		}, 
 		picture: { //Facebook oauth will postback profile img
 			type: String,
-			match: /^http:\/\//i
+			match: /^https?:\/\//i
 			// required: true ->set to be not required
 		}
 	},

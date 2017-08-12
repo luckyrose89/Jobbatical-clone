@@ -22,8 +22,15 @@ module.exports = {
 		})
 	},
 
-	findOneAndUpdate: function(id, params, callback){
-		User.findOneAndUpdate({"data.oauth":id} , (params), { upsert: true, new: true }, function(err, user){
+	findOneAndUpdate: function(queries, params, callback){
+    const options = {
+      new: true,
+      upsert: true,
+      runValidators: true,
+      setDefaultsOnInsert: true,
+    };
+
+		User.findOneAndUpdate(queries, params, options, function(err, user){
 			if (err){
 				callback(err, null)
 				return
