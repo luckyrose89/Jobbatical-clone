@@ -6,7 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { Example } from './component';
+import { Example, AuthDemo } from './component';
 import { InputPage } from './component';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/example" component={Example} />
         <Route path="/input" component={InputPage} />
+        <Route path="/auth-demo" component={AuthDemo} />
         <Redirect to="/example" />
       </Switch>
     </Router>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { inc, dec } from '../action';
 import styles from './Example.scss';
@@ -33,6 +34,7 @@ function Example({ onDec, onInc, num }) {
         <li><a href="/api/job">/api/job</a></li>
         <li><a href="/api/category">/api/category</a></li>
       </ul>
+      <Link to="/auth-demo">Test authentication here !!</Link>
     </div>
   );
 }
