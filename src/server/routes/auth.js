@@ -26,7 +26,7 @@ const signup = (req, res, next) => {
       return;
     }
     if (user && user.length > 0) {
-      const e = new Error(`This email address has registered before:\n${email}`);
+      const e = new Error(`This email address has been registered ${email}`);
       e.status = 409;
       next(e);
       return;
