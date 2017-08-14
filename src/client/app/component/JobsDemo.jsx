@@ -23,7 +23,7 @@ class JobApp extends React.Component {
 
   queryKeyword(){
     var search = document.getElementById("keyword").value
-    console.log(search)
+    console.log('keyword is: ' +search)
 
     return $.getJSON('http://localhost:3000/api/job/keyword/'+search)
       .then((data) => {
@@ -51,24 +51,10 @@ class JobApp extends React.Component {
 }
 
 
-class Header extends React.Component {
-
-
-  render() {
-    return(
-      <div>
-
-      </div>
-    )
-  }
-
-}
-
 class Listjobs extends React.Component {
 
   render() {
     const list = this.props.list
-    console.log(list)
     const jobs = list.map((job)=>{
       return(
       <div className={styles.job_details} key={ job._id.toString() }>

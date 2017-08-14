@@ -4,8 +4,10 @@
 	width: 300px;
 	height: 200px;
 	overflow: hidden;
-	border: 2px solid black;
+	border: 1px solid gray;
+	border-radius:4px;
 	margin: 5px;
+	padding: 2px;
 }
 
 .jobs {
@@ -15,4 +17,12 @@
 
 a {
 	text-decoration:none;
+}
+
+h4 {
+	margin-top: 0px;
+}
+
+a:link, a:visited {
+    color: black;
 }

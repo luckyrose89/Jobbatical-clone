@@ -14,27 +14,24 @@ function Example({ onDec, onInc, num }) {
     <div>
       <img src={testImg} />
       <h1 className={styles.example}>Hello, team bears-8!</h1>
+      <Link to="/jobs-demo">See basic Job page here !!</Link><br/>
+      <Link to="/auth-demo">Test authentication here !!</Link><br/>
+      <Link to="/input">Create new job posting here !!</Link><br/>
+      <a href="/api/user">View all user api: /api/user</a><br/>
+      <a href="/api/job">View all job api: /api/user</a><br/>
+      <a href="/api/category">View all category api: /api/user</a><br/>
+      
       <p>Try to edit these files and the page should update without reloading</p>
       <ul>
         <li>/src/client/app/component/Example.jsx</li>
         <li>/src/client/app/component/Example.scss</li>
         <li>/src/client/app/reducer/example.js</li>
       </ul>
+      
       <button className={styles.button} onClick={onDec}>-</button>
       <span>{num}</span>
       <button className={styles.button} onClick={onInc}>+</button>
       <br/>
-      <p>Use the following path to create new user/job</p>
-      <ul>
-        <li><a href="/input">/input</a></li>
-      </ul>
-      <p>Use the following API route to see data in database</p>
-      <ul>
-        <li><a href="/api/user">/api/user</a></li>
-        <li><a href="/api/job">/api/job</a></li>
-        <li><a href="/api/category">/api/category</a></li>
-      </ul>
-      <Link to="/auth-demo">Test authentication here !!</Link>
     </div>
   );
 }
