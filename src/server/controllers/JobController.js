@@ -55,6 +55,16 @@ module.exports = {
 		})
 	},
 
+	aggregate: function(count, callback){
+		Job.aggregate({$sample:{size:count}}, function(err, user){
+			if (err) {
+				callback(err, null)
+				return
+			}
+			callback(null, user)
+		})
+	},
+
 	destroy: function(id, callback){
 		Job.findByIdAndRemove(id, function(err){
 			if (err){

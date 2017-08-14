@@ -145,4 +145,29 @@ router.post('/:resource', function(req, res, next){
 	})
 })
 
+router.get('/:resource/featured/:count', function(req, res, next){
+	var resource = req.params.resource;
+	var count = parseInt(req.params.count);
+
+	var controller = controllers[resource]
+	if (controller == null){
+	res.json({
+		confirmation: 'fail',
+		message: 'Invalid api resource request: ' + resource
+	})
+
+	return
+	}
+	controller.aggregate(count, function(err, result){
+		if (err){
+			res.json({
+				confirmation: 'fail',
+				message: 'Id Not Found'
+			})
+			return
+		}
+		res.json(result)
+	})
+})
+
 module.exports = router;
