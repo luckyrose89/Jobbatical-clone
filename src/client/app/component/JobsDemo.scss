@@ -1,0 +1,28 @@
+.job_details {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	border: 1px solid gray;
+	border-radius:4px;
+	margin: 5px;
+	padding: 2px;
+}
+
+.jobs {
+	width: 950px;
+	display: inline-block;
+}
+
+a {
+	text-decoration:none;
+}
+
+h4 {
+	margin-top: 0px;
+}
+
+a:link, a:visited {
+    color: black;
+}
