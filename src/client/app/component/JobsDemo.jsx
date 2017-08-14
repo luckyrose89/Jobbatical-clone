@@ -10,11 +10,15 @@ class JobApp extends React.Component {
     this.state = {
       jobsArr: []
     }
+    this.queryKeyword = this.queryKeyword.bind(this)
+    this.jobList = this.jobList.bind(this)
   }
 
   componentDidMount() {
     //request data after components mounts
     this.jobList();
+
+
   }
 
   queryKeyword(){
@@ -22,9 +26,9 @@ class JobApp extends React.Component {
     console.log(search)
 
     return $.getJSON('http://localhost:3000/api/job/keyword/'+search)
-    .then((data) => {
-      console.log(data);
-    });
+      .then((data) => {
+        this.setState({ jobsArr: data });
+      });
   }
 
   jobList() {
@@ -39,6 +43,7 @@ class JobApp extends React.Component {
       <div className = "container">
         <input type="text" id="keyword" placeholder=" keyword" />
         <button type="submit" onClick={this.queryKeyword}> Search Job Keyword </button>
+        <button type="clear" onClick={this.jobList}> Show All Jobs </button>
         <Listjobs list = {this.state.jobsArr}/>
       </div>
     )
