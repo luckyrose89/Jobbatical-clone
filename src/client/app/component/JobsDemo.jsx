@@ -17,8 +17,14 @@ class JobApp extends React.Component {
     this.jobList();
   }
 
-  componentWillUpdate() {
+  queryKeyword(){
+    var search = document.getElementById("keyword").value
+    console.log(search)
 
+    return $.getJSON('http://localhost:3000/api/job/keyword/'+search)
+    .then((data) => {
+      console.log(data);
+    });
   }
 
   jobList() {
@@ -31,7 +37,8 @@ class JobApp extends React.Component {
   render() {
     return (
       <div className = "container">
-        <Header list = {this.state.jobsArr}/>
+        <input type="text" id="keyword" placeholder=" keyword" />
+        <button type="submit" onClick={this.queryKeyword}> Search Job Keyword </button>
         <Listjobs list = {this.state.jobsArr}/>
       </div>
     )
@@ -40,26 +47,12 @@ class JobApp extends React.Component {
 
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
-  queryKeyword(){
-    var search = document.getElementById("keyword").value
-    console.log(search)
-    console.log(this)
-    return $.getJSON('http://localhost:3000/api/job/keyword/'+search)
-    .then((data) => {
-      console.log(data);
-    });
-  }
 
   render() {
-    var list = this.props
     return(
       <div>
-        <input type="text" id="keyword" placeholder=" keyword" />
-        <button type="submit" onClick={this.queryKeyword}> Search Job Keyword </button>
+
       </div>
     )
   }
