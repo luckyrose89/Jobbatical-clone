@@ -6,12 +6,13 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { Example, AuthDemo, InputPage, JobsDemo } from './component';
+import { Example, AuthDemo, InputPage, JobsDemo, Landing} from './component';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/input" component={InputPage} />
         <Route path="/auth-demo" component={AuthDemo} />

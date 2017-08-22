@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	background: #fff;
+}
+
+section {
+	position: relative;
+	clear: both;
+}
+
+/******Header Styles******/
+
+.header-styles {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1042;
+}
+
+.header-styles ul{
+	list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header-styles a {
+    color: #666;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.header-styles .logo a {
+    color: #88498F;
+    font-size: 24px;
+}
+
+.navbar-right {
+    font-size: 16px;
+    padding-top: 10px; 
+}
+
+.navbar-right a {
+    padding-right: 20px;
+}
+
+/******Landing Styles******/
+
+.landing {
+	height: 1024px;
+    background-color: #88498F;
+    padding-top: 50px;
+    margin-top: 80px;
+}
+
+.landing-title h1 {
+	color : #fff;
+	text-align: center;
+	font-size: 48px;
+	line-height: 72px;
+	font-weight: 300;
+}
+
+.landing-options {
+	text-align: center;
+}
+
+.landing-options .btn {
+	border-radius: 5px;
+	background-clip: padding-box;
+    background-color: #9B5094;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    width: 250px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 25px;
+    -webkit-box-shadow: 0 10px 10px 0 rgba(8,57,96,.15);
+    box-shadow: 0 10px 10px 0 rgba(8,57,96,.15);
+    cursor: pointer;
+}
+
+.landing-options .btn:hover, .btn:active {
+	background-color: #9B6095;
+}
+
+.landing .tagline {
+	color: #fff;
+	font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.background-wrap {
+	background-image: url(../../../../assets/images/travel.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 450px;
+}
+
+.landing-numbers {
+	font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*****Press Section Styles*****/
+.press-section {
+	margin: 56px auto;
+}
+
+h3.header,
+h2.header {
+	text-align: center;
+}
+
+h3.header {
+	color: #88498F;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.press-section h2 {
+	margin-bottom: 70px;
+}
+
+.pressbox {
+	color: #fff;
+	font-size: 16px;
+    line-height: 32px!important;
+    position: relative;
+    display: block;
+    background-color: #88498F;
+    padding: 30px;
+    height: 350px;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+}
+
+.pressbox:hover {
+	background-color: #9B6095;
+}
+
+.pressbox .quote {
+    background-image: url(../../../../assets/images/right-quotation-mark.svg);
+    background-position: 0;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-bottom: 35px;
+}
+
+.pressbox .logo {
+	background-image: url(../../../../assets/images/factory.svg);
+	height: 50px;
+	width: 50px;
+	position: absolute;
+    bottom: 50px;
+    left: 30px;
+    background-position: 0;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*****Mission Styles*****/
+
+.mission {
+	background-color: #88498F;
+    color: #fff;
+    margin: 64px auto;
+}
+
+.mission .container {
+	padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(../../../../assets/images/astronaut.svg);
+    background-size: 100px 200px;
+   	background-position: right;
+    background-repeat: no-repeat;
+}
+
+.mission h4 {
+	color: #fff;
+	font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.mission p {
+	margin-top: 20px;
+	font-size: 18px;
+	max-width: 400px;
+	text-align: justify;
+}
+
+.mission .btn {
+	background-color: #fff;
+    color: #88498F;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    padding: 14px 31px;
+    margin: 60px 0;
+    border: 0;
+}
+
+.mission .minor {
+	margin-top: -10px;
+}
+
+/*****Footer Styles*****/
+
+.main-footer {
+	background-color: #fff;
+    padding: 72px 0 0;
+    font-size: 13px;
+}
+
+.footer-section>ul {
+	list-style: none;
+	padding-left: 0;
+	text-transform: uppercase;
+}
+
+.footer-section li {
+	padding: 18px 0;
+}
+
+.footer-section a {
+	color: #666;
+}
+
+.footer-section strong {
+	color: #000;
+    display: block;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.socialIcon {
+	padding: 3px;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    margin-top: -3px;
+}
+
+.company-info .container{
+	border-top: 2px solid #eee;
+	margin-top: 35px;
+	padding-top: 30px;
+}
+
+/*****Media Queries*****/
