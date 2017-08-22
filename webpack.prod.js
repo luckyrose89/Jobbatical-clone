@@ -36,6 +36,7 @@ module.exports = {
         // extract all styles into a separate file
         // also enable css modules for locally scoped rules
         test: /\.(?:sa|s?c)ss$/,
+        exclude: [/node_modules/, /\.global\.(?:sa|s?c)ss$/],
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -45,6 +46,26 @@ module.exports = {
                 minimize: true,
                 modules: true,
                 localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              },
+            },
+            'postcss-loader',
+            'sass-loader',
+          ],
+        }),
+      },
+      {
+        // transpile sass/scss/plain css and
+        // extract all styles into a separate file
+        // also disable css modules for global rules
+        test: /\.(?:sa|s?c)ss$/,
+        include: [/node_modules/, /\.global\.(?:sa|s?c)ss$/],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true,
               },
             },
             'postcss-loader',

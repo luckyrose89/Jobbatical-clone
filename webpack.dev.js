@@ -39,6 +39,7 @@ module.exports = {
         // inject the styles into the page
         // also enable css modules for locally scoped rules
         test: /\.(?:sa|s?c)ss$/,
+        exclude: [/node_modules/, /\.global\.(?:sa|s?c)ss$/],
         use: [
           'style-loader',
           {
@@ -50,6 +51,14 @@ module.exports = {
           },
           'sass-loader',
         ],
+      },
+      {
+        // transpile sass/scss/plain css and
+        // inject the styles into the page
+        // also disable css modules for global rules
+        test: /\.(?:sa|s?c)ss$/,
+        include: [/node_modules/, /\.global\.(?:sa|s?c)ss$/],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         // load various image/font file types as data urls
