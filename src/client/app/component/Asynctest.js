@@ -81,7 +81,7 @@ AsyncApp.propTypes = {
 }
 
 function mapStateToProps(state) {
-  const { selectedKeyword, jobsByKeyword } = state
+  const { selectedKeyword, jobsByKeyword } = state.jobReducer
   const {
     isFetching,
     lastUpdated,

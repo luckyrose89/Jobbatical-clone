@@ -71,7 +71,7 @@ function fetchJobs(keyword) {
 }
 
 function shouldfetchJobs(state, keyword) {
-  const jobs = state.jobsByKeyword[keyword]
+  const jobs = state.jobReducer.jobsByKeyword[keyword]
   if (!jobs) {
     return true
   } else if (jobs.isFetching) {
