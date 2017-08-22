@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/input" component={InputPage} />
         <Route path="/auth-demo" component={AuthDemo} />
         <Route path="/jobs-demo" component={JobsDemo} />
+        <Route path="/" component={Landing} />
         <Redirect to="/example" />
       </Switch>
     </Router>
