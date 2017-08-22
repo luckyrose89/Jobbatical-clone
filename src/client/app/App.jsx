@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Landing} />
+        <Route exact path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/input" component={InputPage} />
         <Route path="/auth-demo" component={AuthDemo} />

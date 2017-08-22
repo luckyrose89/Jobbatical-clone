@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import './style.css';
+require('bootstrap/dist/css/bootstrap.css');
+require('./style.css');
 
 import Heading from './header';
 import Welcome from './welcome';
@@ -13,7 +13,7 @@ class Landing extends Component{
 		return(
 			<div>
 				<Heading />
-				<Landing />
+				<Welcome />
 				<PressQuotes />	
 				<Mission />
 				<Footer />
@@ -22,5 +22,5 @@ class Landing extends Component{
 	}
 }
 
-export {Landing};
+export default Landing;
 
