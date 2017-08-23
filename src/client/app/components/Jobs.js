@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styles from '../component/JobsDemo.scss';
 
 export default class Jobs extends Component {
   render() {
@@ -9,7 +10,7 @@ export default class Jobs extends Component {
       // </ul>
 		<ul className="list-group">
         {this.props.jobs.map((job,i) => 
-          <div className={i} key={ job._id.toString() }>
+          <div className={styles.job_details} key={ job._id.toString() }>
             <a href={"/api/job/" + job._id }>
               <h4> {job.name} </h4>
               <p> Employment Type: {job.employmentType} </p>

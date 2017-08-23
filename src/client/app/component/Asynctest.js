@@ -8,6 +8,8 @@ import {
 } from '../action'
 import Picker from '../components/Picker'
 import Jobs from '../components/Jobs'
+import Inputbox from '../components/Inputbox'
+
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -48,7 +50,13 @@ class AsyncApp extends Component {
         <Picker
           value={selectedKeyword}
           onChange={this.handleChange}
-          options={['all', 'worker', 'engineer','Tech']}
+          options={['All', 'Worker', 'Engineer','Tech']}
+        />
+        <Inputbox 
+          value={selectedKeyword}
+          onClick={this.handleChange}
+          options={['All', 'Worker', 'Engineer','Tech']}
+
         />
         <p>
           {lastUpdated &&
@@ -62,7 +70,7 @@ class AsyncApp extends Component {
             </a>}
         </p>
         {isFetching && jobs.length === 0 && <h2>Loading...</h2>}
-        {!isFetching && jobs.length === 0 && <h2>Empty.</h2>}
+        {!isFetching && jobs.length === 0 && <h4>Try different keyword.</h4>}
         {jobs.length > 0 &&
           <div style={{ opacity: isFetching ? 0.5 : 1 }}>
             <Jobs jobs={jobs} />
