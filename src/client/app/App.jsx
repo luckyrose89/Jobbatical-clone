@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <Switch>
-
         <Route exact path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/input" component={InputPage} />
