@@ -1,7 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise';
-
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
 import rootReducer from './reducer';
+
+const loggerMiddleware = createLogger()
 
 /**
  * Create a redux store
@@ -14,7 +17,7 @@ function configureStore(initialState) {
   const store = createStore(
     rootReducer,
     initialState,
-    composeEnhancers(applyMiddleware(promiseMiddleware)),
+    composeEnhancers(applyMiddleware(promiseMiddleware,thunkMiddleware,loggerMiddleware)),
   );
 
   // enable hot module replacement for reducer
