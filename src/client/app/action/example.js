@@ -8,3 +8,4 @@ export function inc() {
 export function dec() {
   return { type: DEC };
 }
+

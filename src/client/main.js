@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader';
 
 import App from './app';
