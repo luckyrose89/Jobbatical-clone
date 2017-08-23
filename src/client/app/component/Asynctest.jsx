@@ -9,6 +9,7 @@ import {
 import Picker from '../components/Picker'
 import Jobs from '../components/Jobs'
 import Inputbox from '../components/Inputbox'
+import Header from './header';
 
 
 class AsyncApp extends Component {
@@ -43,38 +44,28 @@ class AsyncApp extends Component {
     dispatch(fetchJobsIfNeeded(selectedKeyword))
   }
 
+  // <Picker
+  //   value={selectedKeyword}
+  //   onChange={this.handleChange}
+  //   options={['All', 'Worker', 'Engineer','Tech']}
+  // />
   render() {
     const { selectedKeyword, jobs, isFetching, lastUpdated } = this.props
     return (
       <div>
-        <Picker
-          value={selectedKeyword}
-          onChange={this.handleChange}
-          options={['All', 'Worker', 'Engineer','Tech']}
-        />
+        <Header />
         <Inputbox 
           value={selectedKeyword}
           onClick={this.handleChange}
-          options={['All', 'Worker', 'Engineer','Tech']}
-
+          lastUpdated={lastUpdated}
+          isFetching={isFetching}
+          jobs={jobs}
         />
-        <p>
-          {lastUpdated &&
-            <span>
-              Last updated at {new Date(lastUpdated).toLocaleTimeString()}.
-              {' '}
-            </span>}
-          {!isFetching &&
-            <a href="#" onClick={this.handleRefreshClick}>
-              Refresh
-            </a>}
-        </p>
-        {isFetching && jobs.length === 0 && <h2>Loading...</h2>}
-        {!isFetching && jobs.length === 0 && <h4>Try different keyword.</h4>}
-        {jobs.length > 0 &&
-          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-            <Jobs jobs={jobs} />
-          </div>}
+        <Jobs 
+          jobs={jobs} 
+          isFetching={isFetching}
+        />
+          
       </div>
     )
   }

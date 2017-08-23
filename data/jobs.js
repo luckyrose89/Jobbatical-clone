@@ -117,6 +117,7 @@ module.exports = [
       keyword: [
         'Research',
         'Physics',
+        'Healthcare'
       ],
     },
     incentiveCompensation: 'hourly salary',
@@ -149,6 +150,7 @@ module.exports = [
       keyword: [
         'webdev',
         'chingu',
+        'developer',
         'programming',
       ],
     },
@@ -183,6 +185,8 @@ module.exports = [
         '$',
         '$$',
         '$$$',
+        'special',
+        'Worker'
       ],
     },
     incentiveCompensation: 'no salary',
@@ -214,6 +218,7 @@ module.exports = [
       region: 'Asia',
       keyword: [
         'Surveying',
+        'special'
       ],
     },
     incentiveCompensation: 'monthly salary',
@@ -247,6 +252,7 @@ module.exports = [
         'Bus',
         'Driving',
         'Drifting',
+        'worker'
       ],
     },
     incentiveCompensation: 'monthly salary',
@@ -279,7 +285,8 @@ module.exports = [
       keyword: [
         'Superhero',
         'Marvel',
-        'DC',
+        'Healthcare',
+        'DC'
       ],
     },
     incentiveCompensation: 'superpower',
@@ -311,6 +318,7 @@ module.exports = [
       region: 'Asia',
       keyword: [
         'food',
+        'Healthcare'
       ],
     },
     incentiveCompensation: 'monthly salary',
@@ -377,6 +385,8 @@ module.exports = [
         'design',
         'webdev',
         'photoshop',
+        'developer',
+        'tech'
       ],
     },
     incentiveCompensation: 'monthly salary',
@@ -442,6 +452,8 @@ module.exports = [
       keyword: [
         'mars',
         'space',
+        'spaceship',
+        'worker'
       ],
     },
     incentiveCompensation: 'life',
@@ -499,7 +511,7 @@ module.exports = [
         addressCountry: 'Vietnam',
       },
     },
-    pictures: ['http://www.sweat.shop/international.jpeg'],
+    pictures: ['http://lorempixel.com/400/200/'],
     description: 'We will give you all the hours you wanted to work!',
     category: {
       region: 'Asia',
@@ -507,6 +519,7 @@ module.exports = [
         'UI',
         'Designer',
         'Asia',
+        'tech'
       ],
     },
     incentiveCompensation: 'unlimited hours and overtime',
@@ -533,13 +546,14 @@ module.exports = [
         addressCountry: 'Malaysia',
       },
     },
-    pictures: ['http://www.pinkpeach.com/international.jpeg'],
-    description: 'Provide our VIP customers with speacial care!',
+    pictures: ['http://lorempixel.com/400/200/'],
+    description: 'Provide our VIP customers with special care!',
     category: {
       region: 'Asia',
       keyword: [
         'Assistant',
         'Office',
+        'boring'
       ],
     },
     incentiveCompensation: 'The undescribale satisfication',
@@ -566,14 +580,15 @@ module.exports = [
         addressCountry: 'United States',
       },
     },
-    pictures: ['http://www.pinkpeach.com/international.jpeg'],
-    description: 'Provide our VIP customers with speacial care!',
+    pictures: ['http://lorempixel.com/400/200/'],
+    description: 'Provide our VIP customers with special care!',
     category: {
       region: 'North America',
       keyword: [
         'Assistant',
         'Ranch',
-        'Picker'
+        'Picker',
+        'special'
       ],
     },
     incentiveCompensation: 'All-you-can eat apples',
@@ -601,7 +616,7 @@ module.exports = [
       },
     },
     pictures: ['http://www.bigbros.com/main.jpeg'],
-    description: 'Provide our VIP customers with speacial care!',
+    description: 'Provide our VIP customers with special care!',
     category: {
       region: 'Asia',
       keyword: [
@@ -641,7 +656,7 @@ module.exports = [
       keyword: [
         'Keeper',
         'Worker',
-        'Speacial'
+        'special'
       ],
     },
     incentiveCompensation: 'Design your own antman costumes',
@@ -675,7 +690,7 @@ module.exports = [
       keyword: [
         'Shopper',
         'Worker',
-        'Speacial'
+        'special'
       ],
     },
     incentiveCompensation: 'On top of your salary, you will have the opportunity to earn free cloths and shoes',
@@ -879,7 +894,7 @@ module.exports = [
       keyword: [
         'Keeper',
         'Worker',
-        'Speacial'
+        'special'
       ],
     },
     incentiveCompensation: 'Fly with our bees. Harvest our honey',
@@ -946,7 +961,7 @@ module.exports = [
       keyword: [
         'Shopper',
         'Worker',
-        'Speacial'
+        'special'
       ],
     },
     incentiveCompensation: 'On top of your salary, you will have a set of champion freebies',
