@@ -6,10 +6,11 @@ import {
   fetchJobsIfNeeded,
   invalidateKeyword
 } from '../action'
-import Picker from '../components/Picker'
-import Jobs from '../components/Jobs'
-import Inputbox from '../components/Inputbox'
+import Picker from './Picker'
+import Jobs from './Jobs'
+import Inputbox from './Inputbox'
 import Header from './header';
+import Footer from './footer'
 
 
 class AsyncApp extends Component {
@@ -65,7 +66,7 @@ class AsyncApp extends Component {
           jobs={jobs} 
           isFetching={isFetching}
         />
-          
+        <Footer />
       </div>
     )
   }

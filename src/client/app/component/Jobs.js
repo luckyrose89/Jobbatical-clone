@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import styles from '../component/JobsDemo.scss';
 
 export default class Jobs extends Component {
   render() {
@@ -13,10 +12,10 @@ export default class Jobs extends Component {
             {this.props.jobs.map((job,i) => 
               <div className='job-details' key={ job._id.toString() }>
                 <a href={"/api/job/" + job._id }>
-                  <img src={job.pictures} height='100' width='300'></img>
+                  <img className='job-picture' src={job.pictures} height='150' width='300'></img>
                   <h4 className='job-title'> <strong> {job.name} </strong></h4>
-                  <p className='job-emptype'> <strong>Employment Type:</strong> {job.employmentType} </p>
-                  <p className='job-title'> <strong>Description:</strong> {job.description} </p>
+                  <p className='job-emptype'> {job.employmentType} at {job.jobLocation.addressCity}, {job.jobLocation.addressCountry}</p>
+                  <p className='job-title'> {job.description} </p>
                 </a>
               </div>
             )}

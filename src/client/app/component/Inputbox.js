@@ -30,6 +30,7 @@ export default class Inputbox extends Component {
             ]}
             shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
             getItemValue={item => item.label}
+            inputProps={{className:"search-input"}}
             renderItem={(item, highlighted) =>
               <div
                 className='autocomplete'
@@ -44,7 +45,7 @@ export default class Inputbox extends Component {
             onChange={e => this.setState({ value: e.target.value })}
             onSelect={value => this.setState({ value })}
           />
-          <input type="button" onClick={e => onClick(this.state.value)} value="Search Jobs" />
+          <input className="search-button" type="button" onClick={e => onClick(this.state.value)} value="Search Jobs" />
           <h6>Current Search Keyword: {value}</h6>
           <p>
             {isFetching && jobs.length === 0 && <h2>Loading...</h2>}
