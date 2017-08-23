@@ -16,6 +16,12 @@ section {
 	clear: both;
 }
 
+
+h3.header,
+h2.header {
+	text-align: center;
+}
+
 /******Header Styles******/
 
 .header-styles {
@@ -132,11 +138,6 @@ section {
 /*****Press Section Styles*****/
 .press-section {
 	margin: 56px auto;
-}
-
-h3.header,
-h2.header {
-	text-align: center;
 }
 
 h3.header {
