@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './style.css';
+import './style.global.css';
+
 
 import Heading from './header';
 import Welcome from './welcome';
