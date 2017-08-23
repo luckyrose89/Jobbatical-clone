@@ -7,7 +7,7 @@ import {
   invalidateKeyword
 } from '../action'
 import Picker from './Picker'
-import Jobs from './Jobs'
+import JobLister from './JobLister'
 import Inputbox from './Inputbox'
 import Header from './header';
 import Footer from './footer'
@@ -62,7 +62,7 @@ class AsyncApp extends Component {
           isFetching={isFetching}
           jobs={jobs}
         />
-        <Jobs 
+        <JobLister 
           jobs={jobs} 
           isFetching={isFetching}
         />

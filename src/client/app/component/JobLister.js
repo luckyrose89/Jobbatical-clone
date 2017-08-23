@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 export default class Jobs extends Component {
   render() {
     const { jobs, isFetching } = this.props
-    const url = 'http://lorempixel.com/400/200/'
     return (
       <section className="job-listing-section">
         {jobs.length > 0 &&
