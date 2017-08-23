@@ -6,7 +6,7 @@ import {
   RECEIVE_JOBS
 } from '../action'
 
-function selectedKeyword(state = 'all', action) {
+function selectedKeyword(state = 'All', action) {
   switch (action.type) {
     case SELECT_KEYWORD:
       return action.keyword

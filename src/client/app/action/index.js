@@ -47,7 +47,7 @@ function fetchJobs(keyword) {
   return dispatch => {
     dispatch(requestJobs(keyword))
     console.log(keyword)
-    let api = (keyword === 'all') ? `http://localhost:3000/api/job`:`http://localhost:3000/api/job/keyword/${keyword}`
+    let api = (keyword === 'All'||keyword === 'all') ? `http://localhost:3000/api/job`:`http://localhost:3000/api/job/keyword/${keyword}`
     return fetch(api)
       .then(response => response.json()
         .then(data => ({
