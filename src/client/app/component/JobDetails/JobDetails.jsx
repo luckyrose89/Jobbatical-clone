@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import propTypes from 'prop-types';
 
 import Header from '../header';
@@ -12,10 +13,70 @@ import { fetchJobsIfNeeded } from '../../action';
 export class JobDetails extends React.Component {
   constructor(props) {
     super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.links = [
+      { hash: '#job-details-summary', title: 'Role Summary' },
+      { hash: '#job-details-responsibilities', title: 'Responsibilities' },
+      { hash: '#job-details-requirements', title: 'Requirements' },
+      { hash: '#job-details-compensation', title: 'Compensation' },
+      { hash: '#job-details-description', title: 'Job Description' },
+    ];
+    this.state = { activeHash: '' };
   }
 
   componentWillMount() {
     this.props.fetchData();
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (!this.sidenavEl) {
+      return;
+    } else if (!this.isAtTop() && !this.isAtBottom()) {
+      this.sidenavEl.style.position = 'fixed';
+      this.sidenavEl.style.top = '10vh';
+    } else if (this.isAtTop()) {
+      this.sidenavEl.style.position = 'absolute';
+      this.sidenavEl.style.top = `${this.firstEl.offsetTop +
+        this.firstEl.offsetHeight +
+        0.1 * window.innerHeight}px`;
+    } else {
+      this.sidenavEl.style.position = 'absolute';
+      this.sidenavEl.style.top = `${this.lastEl.offsetTop +
+        this.lastEl.offsetParent.offsetTop +
+        this.lastEl.offsetHeight -
+        0.9 * window.innerHeight}px`;
+    }
+
+    let lastVisible = this.summaryEl;
+    const els = [
+      this.responsibilitiesEl,
+      this.requirementsEl,
+      this.compensationEl,
+      this.descriptionEl,
+    ];
+    for (let i = 0; i < els.length; i++) {
+      const clientRect = els[i].getBoundingClientRect();
+      if (clientRect.top < window.innerHeight / 2) {
+        lastVisible = els[i];
+      } else {
+        break;
+      }
+    }
+    this.setState({ activeHash: `#${lastVisible.id}` });
+  }
+
+  isAtTop() {
+    return this.firstEl && this.firstEl.getBoundingClientRect().bottom > 0;
+  }
+
+  isAtBottom() {
+    return this.lastEl &&
+      this.lastEl.getBoundingClientRect().bottom < window.innerHeight;
   }
 
   render() {
@@ -33,16 +94,37 @@ export class JobDetails extends React.Component {
         key={word}
         className={styles.keyword}
       >{word}</a>);
+      const links = this.links.map(link => <li
+        className={styles['sidenav-item']}
+        key={link.hash}
+      >
+        <HashLink
+          to={{ hash: link.hash }}
+          className={styles['sidenav-link'] + ' ' +
+            (this.state.activeHash === link.hash ?
+              styles['sidenav-link--active'] :
+              '')}
+        >{link.title}</HashLink>
+      </li>);
 
       body = (
         <div className={styles.body}>
           <div
             className={styles.photo}
             style={{ backgroundImage: `url(${job.pictures[0]})` }}
+            ref={el => this.firstEl = el }
           ></div>
 
+          <ul className={styles.sidenav} ref={el => this.sidenavEl = el}>
+            {links}
+          </ul>
+
           <div className={styles.info}>
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              id="job-details-summary"
+              ref={el => this.summaryEl = el}
+            >
               <h3 className={styles.name}>{job.name}</h3>
               <div className={styles.apply}>
                 <span className={styles.date}>
@@ -72,7 +154,11 @@ export class JobDetails extends React.Component {
               {keywords}
             </div>
 
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              id="job-details-responsibilities"
+              ref={el => this.responsibilitiesEl = el}
+            >
               <h5 className={styles.subheading}>Responsibilities</h5>
               <ul className={styles.list}>
                 <li className={styles['list-item']}>
@@ -83,7 +169,11 @@ export class JobDetails extends React.Component {
               </ul>
             </div>
 
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              id="job-details-requirements"
+              ref={el => this.requirementsEl = el}
+            >
               <h5 className={styles.subheading}>Requirements</h5>
               <ul className={styles.list}>
                 <li className={styles['list-item']}>
@@ -94,7 +184,11 @@ export class JobDetails extends React.Component {
               </ul>
             </div>
 
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              id="job-details-compensation"
+              ref={el => this.compensationEl = el}
+            >
               <h5 className={styles.subheading}>Compensation</h5>
               <ul className={styles.list}>
                 <li className={styles['list-item']}>
@@ -105,12 +199,16 @@ export class JobDetails extends React.Component {
               </ul>
             </div>
 
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              id="job-details-description"
+              ref={el => this.descriptionEl = el}
+            >
               <h5 className={styles.subheading}>Job description</h5>
               <p>{job.description}</p>
             </div>
 
-            <div className={styles.card}>
+            <div className={styles.card} ref={el => this.lastEl = el}>
               <h5 className={styles.subheading}>
                 Get notified about similar jobs
               </h5>
