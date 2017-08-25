@@ -8,6 +8,8 @@ import {
   loginUserRequest,
   logoutUserStart,
   logoutUserRequest,
+  signupUserStart,
+  signupUserRequest,
 } from '../action';
 
 export class AuthDemo extends React.Component {
@@ -17,11 +19,16 @@ export class AuthDemo extends React.Component {
       email: '',
       password: '',
       error: null,
+      newEmail: '',
+      newPassword: '',
     };
     this.handleEmailInput = this.handleEmailInput.bind(this);
     this.handlePasswordInput = this.handlePasswordInput.bind(this);
+    this.handleNewEmailInput = this.handleNewEmailInput.bind(this);
+    this.handleNewPasswordInput = this.handleNewPasswordInput.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
 
   componentWillMount() {
@@ -41,10 +48,29 @@ export class AuthDemo extends React.Component {
     this.setState({ password: evt.target.value, error: null });
   }
 
+  handleNewEmailInput(evt) {
+    this.setState({ newEmail: evt.target.value, error: null });
+  }
+
+  handleNewPasswordInput(evt) {
+    this.setState({ newPassword: evt.target.value, error: null });
+  }
+
   handleLogin(evt) {
     evt.preventDefault();
     this.props
       .login(this.state.email, this.state.password)
+      .then(action => {
+        if (action.payload && action.payload.err) {
+          this.setState({ error: action.payload.err });
+        }
+      });
+  }
+
+  handleSignup(evt) {
+    evt.preventDefault();
+    this.props
+      .signup(this.state.newEmail, this.state.newPassword)
       .then(action => {
         if (action.payload && action.payload.err) {
           this.setState({ error: action.payload.err });
@@ -71,9 +97,9 @@ export class AuthDemo extends React.Component {
 
         <hr />
         <h3>Signup here</h3>
-        <form action="/auth/signup" method="post">
-          <input type="text" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="password" />
+        <form onSubmit={this.handleSignup}>
+          <input type="text" name="email" placeholder="Email" onChange={this.handleNewEmailInput} />
+          <input type="password" name="password" placeholder="password" onChange={this.handleNewPasswordInput} />
           <input type="submit" value="signup" />
         </form>
 
@@ -84,8 +110,6 @@ export class AuthDemo extends React.Component {
         {this.props.user && <div>
         <a href="#" onClick={this.handleLogout}>Logout (not work if not already logged in)</a>
 
-        <hr />
-        <a href="/auth/me">check my identity</a>
         </div>}
       </div>
     );
@@ -106,6 +130,10 @@ const mapDispatchToProps = dispatch => ({
   login: (email, password) => {
     dispatch(loginUserStart());
     return dispatch(loginUserRequest(email, password));
+  },
+  signup: (email, password) => {
+    dispatch(signupUserStart());
+    return dispatch(signupUserRequest(email, password));
   },
   logout: () => {
     dispatch(logoutUserStart());

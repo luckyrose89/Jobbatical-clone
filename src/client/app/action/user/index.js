@@ -12,3 +12,8 @@ export { LOGOUT_USER_START, logoutUserStart } from './logoutUserStart';
 export { logoutUserRequest } from './logoutUserRequest';
 export { LOGOUT_USER_SUCCESS, logoutUserSuccess } from './logoutUserSuccess';
 export { LOGOUT_USER_FAILURE, logoutUserFailure } from './logoutUserFailure';
+
+export { SIGNUP_USER_START, signupUserStart } from './signupUserStart';
+export { signupUserRequest } from './signupUserRequest';
+export { SIGNUP_USER_SUCCESS, signupUserSuccess } from './signupUserSuccess';
+export { SIGNUP_USER_FAILURE, signupUserFailure } from './signupUserFailure';
