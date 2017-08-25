@@ -1,4 +1,14 @@
 export { inc, dec, INC, DEC } from './example';
+export {
+  FETCH_USER_START,
+  fetchUserStart,
+  FETCH_USER_REQUEST,
+  fetchUserRequest,
+  FETCH_USER_SUCCESS,
+  fetchUserSuccess,
+  FETCH_USER_FAILURE,
+  fetchUserFailure,
+} from './user';
 
 // actions for jobs page
 import fetch from 'isomorphic-fetch'
