@@ -61,7 +61,12 @@ export class JobDetails extends React.Component {
     ];
     for (let i = 0; i < els.length; i++) {
       const clientRect = els[i].getBoundingClientRect();
-      if (clientRect.top < window.innerHeight / 2) {
+      if (clientRect.top >= 0 &&
+        clientRect.top < window.innerHeight &&
+        clientRect.bottom > 0) {
+        lastVisible = els[i];
+        break;
+      } else if (clientRect.top < window.innerHeight / 2) {
         lastVisible = els[i];
       } else {
         break;
@@ -106,6 +111,21 @@ export class JobDetails extends React.Component {
               '')}
         >{link.title}</HashLink>
       </li>);
+      const applyNow = (
+        <div className={styles.apply}>
+          <span className={styles.date}>
+            Apply before <strong>{job.validThrough}</strong>
+          </span>
+          <div>
+            <button className={'btn btn-default ' + styles['save-btn']}>
+              Save for later
+            </button>
+            <button className={'btn btn-default ' + styles['apply-btn']}>
+              APPLY NOW
+            </button>
+          </div>
+        </div>
+      );
 
       body = (
         <div className={styles.body}>
@@ -126,17 +146,7 @@ export class JobDetails extends React.Component {
               ref={el => this.summaryEl = el}
             >
               <h3 className={styles.name}>{job.name}</h3>
-              <div className={styles.apply}>
-                <span className={styles.date}>
-                  Apply before <strong>{job.validThrough}</strong>
-                </span>
-                <button className={'btn btn-default ' + styles['save-btn']}>
-                  Save for later
-                </button>
-                <button className={'btn btn-default ' + styles['apply-btn']}>
-                  APPLY NOW
-                </button>
-              </div>
+              {applyNow}
               <p className={styles.share}>Know someone who would be perfect for this job? Share the link: (put some links here)</p>
             </div>
 
@@ -219,6 +229,7 @@ export class JobDetails extends React.Component {
               <button className={'btn btn-default ' + styles['join-btn']}>
                 JOIN NOW
               </button>
+              {applyNow}
             </div>
           </div>
         </div>

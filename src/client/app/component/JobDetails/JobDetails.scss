@@ -56,6 +56,7 @@ $btn-hover-color: #9b6095;
   flex: 1;
 }
 
+.apply,
 .share {
   margin-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, .12);
@@ -172,20 +173,26 @@ $btn-hover-color: #9b6095;
   letter-spacing: 1px;
   font-size: .8em;
   color: rgba(0, 0, 0, .54);
+  text-decoration: none;
   transition: color .15s cubic-bezier(.4, 0, .2, 1);
 
-  &,
   &:hover,
   &:active,
-  &:focus,
-  &:link,
-  &:visited {
+  &:focus {
     text-decoration: none;
+    color: $btn-color;
   }
 }
 
 .sidenav-link--active {
-  color: $btn-color;
+  &,
+  &:active,
+  &:focus,
+  &:link,
+  &:visited,
+  &:hover {
+    color: $btn-color;
+  }
 }
 
 @media (max-width: 991px) {
@@ -203,7 +210,7 @@ $btn-hover-color: #9b6095;
   .join-btn,
   .save-btn,
   .apply-btn {
-    margin: 16px 0 0;
+    margin: 16px 16px 0 0;
   }
 
   .sidenav {
