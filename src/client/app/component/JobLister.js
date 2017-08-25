@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 export default class Jobs extends Component {
   render() {
@@ -10,12 +11,12 @@ export default class Jobs extends Component {
     		<div className="list-group" style={{ opacity: isFetching ? 0.5 : 1 }}>
             {this.props.jobs.map((job,i) => 
               <div className='job-details' key={ job._id.toString() }>
-                <a href={"/api/job/" + job._id }>
+                <Link to={"/job/" + job._id }>
                   <img className='job-picture' src={job.pictures} height='150' width='300'></img>
                   <h4 className='job-title'> <strong> {job.name} </strong></h4>
                   <p className='job-emptype'> {job.employmentType} at {job.jobLocation.addressCity}, {job.jobLocation.addressCountry}</p>
                   <p className='job-title'> {job.description} </p>
-                </a>
+                </Link>
               </div>
             )}
         </div>}
