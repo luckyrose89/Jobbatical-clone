@@ -16,7 +16,6 @@ section {
 	clear: both;
 }
 
-
 h3.header,
 h2.header {
 	text-align: center;
@@ -25,6 +24,7 @@ h2.header {
 /******Header Styles******/
 
 .header-styles {
+    background: #fff;
 	position: absolute;
     	background-color: #fff;
 	width: 100%;
@@ -45,9 +45,19 @@ h2.header {
     font-weight: bolder;
 }
 
-.header-styles .logo a {
+.header-styles .logo a,
+.navbar-header .navbar-brand{
     color: #88498F;
     font-size: 24px;
+}
+
+.header-styles .navbar-header {
+    padding:20px;
+}
+
+.header-styles .navbar-header .navbar-right a {
+    color: #88498F;
+    font-weight: lighter;
 }
 
 .navbar-right {
@@ -120,6 +130,7 @@ h2.header {
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 450px;
+    margin-bottom: 30px;
 }
 
 .landing-numbers {
@@ -133,6 +144,70 @@ h2.header {
     max-width: 580px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*****Featured Jobs Section*****/
+
+.featured-jobs {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.featured-jobs h3 {
+    margin-bottom: 50px;
+}
+
+.jobCard {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    color: #666;
+    cursor: pointer;
+    min-height: 400px;
+    max-height: 400px;
+    overflow:hidden;
+}
+
+.jobCard .job-picture {
+    margin-bottom: 10px;
+    height: 220px;
+    width: 100%;
+}
+
+.jobCard .job-desc {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.jobCard .job-desc h4 {
+    font-weight: 700;
+}
+
+.jobCard .companyLoc {
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.jobCard .company {
+    font-weight: bolder;
+}
+
+.jobCard .jobCard-footer {
+    padding: 20px;
+    margin-top: -10px;
+}
+
+.jobCard .save-btn {
+    float: right;
+}
+
+.jobCard .save-btn .btn {
+    background: #88498F;
+    color: #fff;
+    margin-top: -10px;
 }
 
 /*****Press Section Styles*****/
@@ -296,6 +371,47 @@ h3.header {
 
 /*****Media Queries*****/
 
+@media(max-width: 768px) {
+
+    /*****landing styles*****/
+    .landing {
+        height: 1200px;
+    }
+
+    .landing-numbers {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 540px) {
+
+     /*****landing styles*****/
+
+     .landing {
+        height: 1320px;
+     }
+
+    .landing-numbers {
+        font-size: 24px;
+    }
+
+    /*****Mission Styles*****/
+
+    .mission .container {
+        background-position: bottom;
+    }
+    .mission p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    /*****Featured Job Styles*****/
+    .jobCard .job-desc h4 {
+        font-size: 15px;
+    }
+
+}
+
 /*****Jobs Page*****/
    /** inputbox **/
 .inputbox-section {
@@ -389,3 +505,4 @@ h3.header {
 .job-emptype {
     color: #908593;
 }
+
