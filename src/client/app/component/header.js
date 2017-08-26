@@ -19,7 +19,7 @@ class Heading extends Component {
 									<a href="/">JobsOnTheGo</a>
 								</li>
 								<li className="hidden-xs">
-									<a href="/">Explore Jobs</a>
+									<a href="/jobs">Explore Jobs</a>
 								</li>
 							</ul>
 							<ul className="nav navbar-nav navbar-right">

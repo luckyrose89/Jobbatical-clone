@@ -120,9 +120,13 @@ router.get('/:resource/keyword/:id', function(req, res, next){
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource;
 	// logic setup to read data.oauth for User model and name for Job model
-	var id = req.body.data? req.body.data.oauth : req.body.name;
+	var id = req.body.data? req.body.data.oauth : req.body.values.name;
 	console.log("resource ", resource)
-	console.log("keyword ", id)
+
+	// adjust post request from Redux-form
+	if (resource == 'job') {
+		req.body = req.body.values
+	}
 	var controller = controllers[resource]
 	
 	if (controller == null){

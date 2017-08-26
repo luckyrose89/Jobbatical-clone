@@ -6,6 +6,7 @@ import './style.global.css';
 
 import Heading from './header';
 import Welcome from './welcome';
+import Featured from './featuredJobs.js';
 import PressQuotes from './press-quotes';
 import Mission from './mission';
 import Footer from './footer'
@@ -16,6 +17,7 @@ class Landing extends Component{
 			<div>
 				<Heading />
 				<Welcome />
+				<Featured />
 				<PressQuotes />	
 				<Mission />
 				<Footer />
