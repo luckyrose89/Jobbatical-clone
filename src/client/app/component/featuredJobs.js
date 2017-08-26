@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { Link } from 'react-router-dom';
 
 class Featured extends Component {
 	constructor() {
@@ -21,7 +21,7 @@ class Featured extends Component {
 		var date;
 		const items = this.state.data.map(item => (
 						<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-							<a href="/">
+							<Link to={"/job/" + item._id }>
 								<div className="jobCard">
 									<img className='job-picture' src={item.pictures}></img>
 									<div className="job-desc">
@@ -37,7 +37,7 @@ class Featured extends Component {
 										</div>
 									</div>
 								</div>
-							</a>
+							</Link>
 						</div>
 						));
 
