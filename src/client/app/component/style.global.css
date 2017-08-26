@@ -16,9 +16,15 @@ section {
 	clear: both;
 }
 
+h3.header,
+h2.header {
+    text-align: center;
+}
+
 /******Header Styles******/
 
 .header-styles {
+    background: #fff;
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -38,9 +44,19 @@ section {
     font-weight: bolder;
 }
 
-.header-styles .logo a {
+.header-styles .logo a,
+.navbar-header .navbar-brand{
     color: #88498F;
     font-size: 24px;
+}
+
+.header-styles .navbar-header {
+    padding:20px;
+}
+
+.header-styles .navbar-header .navbar-right a {
+    color: #88498F;
+    font-weight: lighter;
 }
 
 .navbar-right {
@@ -113,6 +129,7 @@ section {
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 450px;
+    margin-bottom: 30px;
 }
 
 .landing-numbers {
@@ -128,14 +145,66 @@ section {
     margin-right: auto;
 }
 
+/*****Featured Jobs Section*****/
+
+.featured-jobs {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.featured-jobs h3 {
+    margin-bottom: 50px;
+}
+
+.jobCard {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    color: #666;
+    cursor: pointer;
+    min-height: 400px;
+    max-height: 400px;
+    overflow:hidden;
+}
+
+.jobCard .job-picture {
+    margin-bottom: 10px;
+    height: 220px;
+    width: 100%;
+}
+
+.jobCard .job-desc {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.jobCard .job-desc h4 {
+    font-weight: 700;
+}
+
+.jobCard .companyLoc {
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.jobCard .company {
+    font-weight: bolder;
+}
+
+.jobCard .jobCard-footer {
+    padding: 20px;
+}
+
+.jobCard .save-btn {
+    float: right;
+}
+
 /*****Press Section Styles*****/
 .press-section {
 	margin: 56px auto;
-}
-
-h3.header,
-h2.header {
-	text-align: center;
 }
 
 h3.header {
@@ -293,3 +362,39 @@ h3.header {
 }
 
 /*****Media Queries*****/
+
+@media(max-width: 768px) {
+
+    /*****landing styles*****/
+    .landing {
+        height: 1200px;
+    }
+
+    .landing-numbers {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 540px) {
+
+     /*****landing styles*****/
+
+     .landing {
+        height: 1320px;
+     }
+
+    .landing-numbers {
+        font-size: 24px;
+    }
+
+    /*****Mission Styles*****/
+
+    .mission .container {
+        background-position: bottom;
+    }
+    .mission p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+}

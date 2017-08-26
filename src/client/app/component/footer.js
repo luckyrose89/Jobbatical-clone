@@ -57,31 +57,31 @@ class Footer extends Component {
 								<li>
 									<a>Facebook</a>
 									<span className="socialIcon">
-										<img src="./images/facebook.png"/>
+										<img src="../../../../assets/images/facebook.png"/>
 									</span>
 								</li>
 								<li>
 									<a>Twitter</a>
 									<span className="socialIcon">
-										<img src="./images/twitter.png"/>
+										<img src="../../../../assets/images/twitter.png"/>
 									</span>
 								</li>
 								<li>
 									<a>Google Plus</a>
 									<span className="socialIcon">
-										<img src="./images/google-plus.png"/>
+										<img src="../../../../assets/images/google-plus.png"/>
 									</span>
 								</li>
 								<li>
 									<a>Instagram</a>
 									<span className="socialIcon">
-										<img src="./images/instagram.png"/>
+										<img src="../../../../assets/images/instagram.png"/>
 									</span>
 								</li>
 								<li>
 									<a href="/">LinkedIn</a>
 									<span className="socialIcon">
-										<img src="./images/linkedin.png"/>
+										<img src="../../../../assets/images/linkedin.png"/>
 									</span>
 								</li>
 							</ul>
