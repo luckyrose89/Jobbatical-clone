@@ -33,7 +33,7 @@ class Featured extends Component {
 											Expires {new Date(item.validThrough).getUTCDate()}-{new Date(item.validThrough).getUTCMonth() + 1}-{new Date(item.validThrough).getUTCFullYear()}
 										</div>
 										<div className="save-btn">
-											<a href="/">Save</a>
+											<button className="btn">Save</button>
 										</div>
 									</div>
 								</div>

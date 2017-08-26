@@ -196,10 +196,17 @@ h2.header {
 
 .jobCard .jobCard-footer {
     padding: 20px;
+    margin-top: -10px;
 }
 
 .jobCard .save-btn {
     float: right;
+}
+
+.jobCard .save-btn .btn {
+    background: #88498F;
+    color: #fff;
+    margin-top: -10px;
 }
 
 /*****Press Section Styles*****/
@@ -395,6 +402,11 @@ h3.header {
     .mission p {
         font-size: 20px;
         width: 100%;
+    }
+
+    /*****Featured Job Styles*****/
+    .jobCard .job-desc h4 {
+        font-size: 15px;
     }
 
 }
