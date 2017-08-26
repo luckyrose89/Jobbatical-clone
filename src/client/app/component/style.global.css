@@ -506,3 +506,32 @@ h3.header {
     color: #908593;
 }
 
+/*****Create Job Page*****/
+.job-form {
+    margin: 150px 20vw 20px 20vw;
+    width: 60vw;
+    border: 1px solid rgba(155,80,148,0.5);
+    background-color: #F4F4F6;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+}
+
+.input-single:focus, .input-textarea:focus {
+    background-color: #F7FFF7;
+}
+
+.input-single {
+    padding: 1px;
+    margin: 0px 2px 3px 0px;
+}
+
+.job-form > form > div > label {
+    margin: 12px 2px 1px 0px;
+}
+
+.input-textarea {
+    padding: 1px;
+    margin: 0px 2px 3px 0px;
+    width: 290px;
+    height: 100px
+}
