@@ -1,4 +1,38 @@
 export { inc, dec, INC, DEC } from './example';
+export {
+  FETCH_USER_START,
+  fetchUserStart,
+  FETCH_USER_REQUEST,
+  fetchUserRequest,
+  FETCH_USER_SUCCESS,
+  fetchUserSuccess,
+  FETCH_USER_FAILURE,
+  fetchUserFailure,
+
+  LOGIN_USER_START,
+  LOGIN_USER_FAILURE,
+  LOGIN_USER_SUCCESS,
+  loginUserStart,
+  loginUserFailure,
+  loginUserRequest,
+  loginUserSuccess,
+
+  LOGOUT_USER_START,
+  logoutUserStart,
+  logoutUserRequest,
+  LOGOUT_USER_SUCCESS,
+  logoutUserSuccess,
+  LOGOUT_USER_FAILURE,
+  logoutUserFailure,
+
+  SIGNUP_USER_START,
+  signupUserStart,
+  signupUserRequest,
+  SIGNUP_USER_SUCCESS,
+  signupUserSuccess,
+  SIGNUP_USER_FAILURE,
+  signupUserFailure,
+} from './user';
 
 // actions for jobs page
 import fetch from 'isomorphic-fetch'
@@ -47,7 +81,7 @@ function fetchJobs(keyword) {
   return dispatch => {
     dispatch(requestJobs(keyword))
     console.log(keyword)
-    let api = (keyword === 'all') ? `http://localhost:3000/api/job`:`http://localhost:3000/api/job/keyword/${keyword}`
+    let api = (keyword === 'All'||keyword === 'all') ? `http://localhost:3000/api/job`:`http://localhost:3000/api/job/keyword/${keyword}`
     return fetch(api)
       .then(response => response.json()
         .then(data => ({

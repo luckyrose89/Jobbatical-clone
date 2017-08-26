@@ -18,7 +18,7 @@ section {
 
 h3.header,
 h2.header {
-    text-align: center;
+	text-align: center;
 }
 
 /******Header Styles******/
@@ -26,6 +26,7 @@ h2.header {
 .header-styles {
     background: #fff;
 	position: absolute;
+    background-color: #F7FFF7;
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -410,3 +411,98 @@ h3.header {
     }
 
 }
+
+/*****Jobs Page*****/
+   /** inputbox **/
+.inputbox-section {
+    position: block;
+    padding-top: 10%;
+    background-color: #F4F4F6;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    z-index: 99;
+}
+
+.inputbox-section .autocomplete {
+    text-align: left;
+    padding-left: 5px;
+
+}
+
+.inputbox-section .serach-title{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+    /** inputbox **/
+.job-listing-section {
+    display: block;
+    background-color: #F4F4F6;
+    margin: auto;
+    text-align: center;
+}
+
+.search-status {
+    margin-bottom: 20px;
+}
+
+.search-status .search-input {
+    font-size: 14px;
+    padding: 7px 10px;
+    margin: 20px 2px;
+    width: 380px;
+}
+
+.search-status .search-button{
+    background-color: #9F84BD;
+    color: #F7FFF7;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+    padding: 14px 31px;
+    margin: 20px 2px;
+    border: 0;
+    width: 140px;
+}
+
+.job-details {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 290px;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid rgba(155,80,148,0.1);
+    border-radius:4px;
+    background-color: #F7FFF7;
+    margin: 5px;
+    padding: 9px;
+}
+
+.job-details>a{
+    text-decoration:none;
+}
+
+.job-details:hover .job-picture {
+    margin: -85px -5px 5px -15px;
+    padding: 0px;
+    transition-duration: 1.5s
+}
+
+.job-details:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.job-picture {
+    margin: -9px 0px 5px -15px;
+    padding: 0px;
+}
+
+.job-emptype {
+    color: #908593;
+}
+
