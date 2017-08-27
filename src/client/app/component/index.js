@@ -1,8 +1,9 @@
 import Landing from './Landing';
-import InputPage from './InputPage';
+import InputPage from './Employer/InputPage';
 import Example from './Example';
 import AuthDemo from './AuthDemo';
-import Jobs from './Jobs';
+import { Jobs } from './JobsMain';
 import { JobDetails } from './JobDetails';
+import { EmpMain, EmpHow, EmpPrice } from './Employer';
 
-export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails };
+export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, EmpMain, EmpHow, EmpPrice };

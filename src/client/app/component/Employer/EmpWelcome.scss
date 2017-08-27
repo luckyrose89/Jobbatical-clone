@@ -1,0 +1,89 @@
+.landing {
+	height: 700px;
+    background-color: #9F84BD;
+    padding-top: 50px;
+    margin-top: 80px;
+
+    background-image: url(../../../../../assets/images/worldmap.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing svg path {
+    fill: red;
+}
+
+.landing-title h1 {
+	color : #fff;
+	text-align: center;
+	font-size: 48px;
+	line-height: 72px;
+	font-weight: 300;
+}
+
+.landing-options {
+	text-align: center;
+}
+
+.landing-options-btn {
+	border-radius: 5px;
+	background-clip: padding-box;
+    background-color: #ccafed;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    width: 250px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 25px;
+    -webkit-box-shadow: 0 10px 10px 0 rgba(8,57,96,.15);
+    box-shadow: 0 10px 10px 0 rgba(8,57,96,.15);
+    cursor: pointer;
+}
+
+.landing-options-input {
+    width: 250px;
+    line-height: 32px;
+}
+
+.landing-options-input-btn {
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: #ccafed;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.landing-options .btn:hover, .btn:active {
+	background-color: #9B6095;
+}
+
+.landing .tagline {
+	color: #fff;
+	font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.landing-numbers {
+	font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}

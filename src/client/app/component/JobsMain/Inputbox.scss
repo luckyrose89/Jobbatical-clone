@@ -1,0 +1,46 @@
+.inputbox-section {
+    position: block;
+    padding-top: 10%;
+    background-color: #F4F4F6;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    z-index: 99;
+}
+
+.inputbox-section .autocomplete {
+    text-align: left;
+    padding-left: 5px;
+
+}
+
+.inputbox-section .serachTitle{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.search-status {
+    margin-bottom: 20px;
+}
+
+.search-status .search-input {
+    font-size: 14px;
+    padding: 7px 10px;
+    margin: 20px 2px;
+    width: 380px;
+}
+
+.search-status .search-button{
+    background-color: #9F84BD;
+    color: #F7FFF7;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+    padding: 14px 31px;
+    margin: 20px 2px;
+    border: 0;
+    width: 140px;
+}
