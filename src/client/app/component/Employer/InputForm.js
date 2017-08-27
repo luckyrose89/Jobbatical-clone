@@ -1,10 +1,27 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import styles from './InputForm.scss';
+
+const required = value => value ? undefined : '!'
+
+const renderField = ({ input, className, placeholder, type, meta: { touched, error, warning } }) => (
+  <span>
+      <input {...input} className={className} placeholder={placeholder} type={type}/>
+      {touched && ((error && <span className={ styles['form-err'] }>{error}</span>) || (warning && <span className={ styles['form-err'] }>{warning}</span>))}
+  </span>
+)
+
+const renderTextarea = ({ textarea, className, placeholder, type, meta: { touched, error, warning } }) => (
+  <span>
+      <textarea {...textarea} className={className} placeholder={placeholder} type={type}/>
+      {touched && ((error && <span className={ styles['form-err'] }>{error}</span>) || (warning && <span className={ styles['form-err'] }>{warning}</span>))}
+  </span>
+)
 
 const InputForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
   return (
-    <div className='job-form'>
+    <div className={ styles['job-form'] }>
       <form onSubmit={ handleSubmit } >
         <h2>Enter Job Opening Descriptions</h2>
         <h4>Where Dream and Reality Merge</h4>
@@ -13,10 +30,11 @@ const InputForm = props => {
           <div>
             <Field
               name="name"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Job Title"
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
         </div>
@@ -26,33 +44,37 @@ const InputForm = props => {
           <div>
             <Field
               name="hiringOrganization.name"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Company's Name"
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
           <div>
             <Field
               name="hiringOrganization.location.addressCity"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="City"
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="hiringOrganization.location.addressRegion"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Region"
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="hiringOrganization.location.addressCountry"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Country"
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
         </div>
@@ -62,24 +84,27 @@ const InputForm = props => {
           <div>
             <Field
               name="jobLocation.addressCity"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="City"
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="jobLocation.addressRegion"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Region"
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="jobLocation.addressCountry"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Country"
-              className="input-single"
+              className={ styles['input-single'] }
             />
 
           </div>
@@ -90,10 +115,11 @@ const InputForm = props => {
           <div>
             <Field
               name="pictures"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="https://testjobpost.com"
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
         </div>
@@ -103,10 +129,11 @@ const InputForm = props => {
           <div>
             <Field
               name="description"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Job Description"
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
         </div>
@@ -116,24 +143,27 @@ const InputForm = props => {
           <div>
             <Field
               name="category.keyword"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Comma Separated (A, B, ..)"
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="category.region"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Asia, United States, ..."
-              className="input-single"
+              className={ styles['input-single'] }
             />
             <Field
               name="industry"
-              component="input"
+              component={renderField}
+              validate={[ required ]}
               type="text"
               placeholder="Tech, healthcare,..."
-              className="input-single"
+              className={ styles['input-single'] }
             />
           </div>
         </div>
@@ -141,21 +171,33 @@ const InputForm = props => {
         <div>
           <label>Incentive and Compensation</label>
           <div>
-            <Field name="incentiveCompensation" component="textarea"  className="input-textarea"/>
+            <Field 
+              name="incentiveCompensation" 
+              component={renderTextarea}
+              className={ styles['input-textarea'] } 
+              validate={[ required ]}/>
           </div>
         </div>
 
         <div>
           <label>Responsibilities</label>
           <div>
-            <Field name="responsibilities" component="textarea"  className="input-textarea"/>
+            <Field 
+              name="responsibilities" 
+              component={renderTextarea}
+              className={ styles['input-textarea'] } 
+              validate={[ required ]}/>
           </div>
         </div>
 
         <div>
           <label>Qualifications</label>
           <div>
-            <Field name="qualifications" component="textarea" className="input-textarea"/>
+            <Field 
+              name="qualifications" 
+              component={renderTextarea}
+              className={ styles['input-textarea'] } 
+              validate={[ required ]}/>
           </div>
         </div>
 
@@ -163,12 +205,12 @@ const InputForm = props => {
           <label>Employment Type</label>
           <div>
             <label>
-              <Field name="employmentType" component="input" type="radio" value="Full-Time" />
+              <Field name="employmentType" component={renderField} type="radio" value="Full-Time" />
               {' '}
               Full-Time
             </label>
             <label>
-              <Field name="employmentType" component="input" type="radio" value="PFull-Time" />
+              <Field name="employmentType" component={renderField} type="radio" value="Part-Time" />
               {' '}
               Part-Time
             </label>
@@ -187,5 +229,5 @@ const InputForm = props => {
 };
 
 export default reduxForm({
-  form: 'simple', // a unique identifier for this form
+  form: 'newJob', // a unique identifier for this form
 })(InputForm);

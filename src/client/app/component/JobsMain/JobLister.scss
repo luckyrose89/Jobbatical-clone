@@ -1,0 +1,43 @@
+.job-listing-section {
+    display: block;
+    background-color: #F4F4F6;
+    margin: auto;
+    text-align: center;
+}
+
+.job-details {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 290px;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid rgba(155,80,148,0.1);
+    border-radius:4px;
+    background-color: #F7FFF7;
+    margin: 5px;
+    padding: 9px;
+}
+
+.job-details>a{
+    text-decoration:none;
+}
+
+.job-details:hover .job-picture {
+    margin: -85px -5px 5px -15px;
+    padding: 0px;
+    transition-duration: 1.5s
+}
+
+.job-details:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.job-picture {
+    margin: -9px 0px 5px -15px;
+    padding: 0px;
+}
+
+.job-emptype {
+    color: #908593;
+}

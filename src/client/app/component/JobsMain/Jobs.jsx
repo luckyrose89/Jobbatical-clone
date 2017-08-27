@@ -5,15 +5,15 @@ import {
   selectKeyword,
   fetchJobsIfNeeded,
   invalidateKeyword
-} from '../action'
+} from '../../action'
 import Picker from './Picker'
 import JobLister from './JobLister'
 import Inputbox from './Inputbox'
-import Header from './header';
-import Footer from './footer'
+import Header from '../header';
+import Footer from '../footer'
 
 
-class AsyncApp extends Component {
+class Jobs extends Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -72,7 +72,7 @@ class AsyncApp extends Component {
   }
 }
 
-AsyncApp.propTypes = {
+Jobs.propTypes = {
   selectedKeyword: PropTypes.string.isRequired,
   jobs: PropTypes.array.isRequired,
   isFetching: PropTypes.bool.isRequired,
@@ -99,5 +99,5 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(AsyncApp)
-export { AsyncApp };
+export default connect(mapStateToProps)(Jobs)
+export { Jobs };

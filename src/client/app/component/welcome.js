@@ -11,10 +11,10 @@ class Welcome extends Component {
 						<strong>See The World</strong>
 					</h1>
 					<div className="landing-options">
-						<a href="/" className="btn btn-lg">
+						<a href="/jobs" className="btn btn-lg">
 							Explore All Jobs
 						</a>
-						<a href="/" className="btn btn-lg">
+						<a href="/employer" className="btn btn-lg">
 							Hiring? Start Here
 						</a>
 					</div>

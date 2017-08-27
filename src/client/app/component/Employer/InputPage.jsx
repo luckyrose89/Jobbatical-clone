@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Values } from 'redux-form-website-template';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
+import PropTypes from 'prop-types'
 import InputForm from './InputForm';
-import Header from './header';
-import Footer from './footer';
+import EmpHeading from './EmpHeader';
+import Footer from '../footer';
 import createNewJob from './createNewJob';
 
 class CreateJob extends Component {
@@ -14,7 +15,7 @@ class CreateJob extends Component {
    render() {
     return (
       <div>
-        <Header />
+        <EmpHeading />
         <InputForm onSubmit={createNewJob} />
         <Footer />
       </div>
@@ -23,6 +24,7 @@ class CreateJob extends Component {
 }
 
 CreateJob.propTypes = {
+  onSubmit: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {

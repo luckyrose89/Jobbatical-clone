@@ -13,7 +13,7 @@ class Footer extends Component {
 									<a href="/">Home</a>
 								</li>
 								<li>
-									<a href="/">Explore Jobs</a>
+									<a href="/jobs">Explore Jobs</a>
 								</li>
 								<li>
 									<a href="/">Join Now</a>
@@ -24,13 +24,13 @@ class Footer extends Component {
 							<strong>For Business</strong>
 							<ul>
 								<li>
-									<a href="/">What We offer</a>
+									<a href="/employer">What We offer</a>
 								</li>
 								<li>
-									<a href="/">Pricing</a>
+									<a href="/employer/pricing">Pricing</a>
 								</li>
 								<li>
-									<a href="/">Customers</a>
+									<a href="/employer/pricing">Customers</a>
 								</li>
 							</ul>
 						</div>
