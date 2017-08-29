@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
-import styles from './EmpPricing.scss';
+import styles from './Demo.scss';
 
 import FontAwesome from 'react-fontawesome';
 
-class EmpPricing extends Component {
+class Demo extends Component {
 	render() {
 		return(
-			<section className='pricing'>
+			<section className='demo'>
 				<div className={ styles['contact-for-more'] }>
-					<h3>Pricing</h3>
-					<div>Contact Us for Details</div>
+					<h3>Demo Time</h3>
+					<div>Contact Us for a fabulous demo</div>
 					<form action='/api/contact' method="post">
-						<input type="hidden" name="inquiry" value="pricing" />
+						<input type="hidden" name="inquiry" value="demo" />
 						<input type="text" name="email" placeholder="youremail@mail.com" />
 					  	<input type="submit" value="Sumbit" />
 					</form>
@@ -22,4 +22,4 @@ class EmpPricing extends Component {
 	}
 }
 
-export default EmpPricing;
+export default Demo;

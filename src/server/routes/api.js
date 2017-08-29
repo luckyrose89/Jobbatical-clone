@@ -5,6 +5,7 @@ var router = express.Router();
 var Category = require('../models/Category');
 var Job = require('../models/Job');
 var User = require('../models/User');
+var Contact = require('../models/Contact');
 
 // import controller from //controllers/index.js which contains all controllers
 var controllers = require('../controllers')
@@ -18,7 +19,7 @@ router.get('/:resource', function(req, res, next){
 		res.json({
 			confirmation: 'fail',
 			message: 'Invalid api resource request: ' + resource,
-			avaiableResources: 'job, user, category'
+			avaiableResources: 'job, user, category, contact'
 		})
 		return
 	}
@@ -119,14 +120,23 @@ router.get('/:resource/keyword/:id', function(req, res, next){
 // Find and Update
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource;
-	// logic setup to read data.oauth for User model and name for Job model
-	var id = req.body.data? req.body.data.oauth : req.body.values.name;
+	// logic setup to read data.oauth for User model, name for Job model, and email for Contact model
+	if (resource === 'contact') {
+		var id = {'email':req.body.email}
+	} else if (resource === 'job'){
+		var id = {'name':req.body.values.name}
+		req.body = req.body.values
+	} else {
+		var id = {'data.oauth':req.body.data.oauth}
+	}
+	// var id = req.body.data? req.body.data.oauth : req.body.values.name;
+	console.log('id is',id)
 	console.log("resource ", resource)
 
 	// adjust post request from Redux-form
-	if (resource == 'job') {
-		req.body = req.body.values
-	}
+	// if (resource == 'job') {
+	// 	req.body = req.body.values
+	// }
 	var controller = controllers[resource]
 	
 	if (controller == null){
