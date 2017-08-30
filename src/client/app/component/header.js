@@ -27,7 +27,7 @@ class Heading extends Component {
 									<a href="/login">Log In</a>
 								</li>
 								<li>
-									<a href="/">Join</a>
+									<a href="/signup">Join</a>
 								</li>
 								<li>
 									<a href="/employer">For The Employers</a>
