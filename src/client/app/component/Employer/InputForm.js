@@ -11,9 +11,9 @@ const renderField = ({ input, className, placeholder, type, meta: { touched, err
   </span>
 )
 
-const renderTextarea = ({ textarea, className, placeholder, type, meta: { touched, error, warning } }) => (
+const renderTextarea = ({ input, className, placeholder, type, meta: { touched, error, warning } }) => (
   <span>
-      <textarea {...textarea} className={className} placeholder={placeholder} type={type}/>
+      <textarea {...input} className={className} placeholder={placeholder} type={type}/>
       {touched && ((error && <span className={ styles['form-err'] }>{error}</span>) || (warning && <span className={ styles['form-err'] }>{warning}</span>))}
   </span>
 )
