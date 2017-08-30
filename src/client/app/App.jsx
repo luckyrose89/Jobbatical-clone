@@ -17,6 +17,9 @@ import {
   EmpHow,
   EmpPrice,
   EmpDemo,
+  Login,
+  ForgotPass,
+  SignUp,
 } from './component';
 
 function App() {
@@ -34,6 +37,9 @@ function App() {
         <Route path="/auth-demo" component={AuthDemo} />
         <Route path="/jobs" component={Jobs} />
         <Route path="/job/:id" component={JobDetails} />
+        <Route path="/login" component={Login} />
+        <Route path="/forgot" component={ForgotPass} />
+        <Route path="/signup" component={SignUp} />
         <Route path="/" component={Landing} />
         <Redirect to="/example" />
       </Switch>
