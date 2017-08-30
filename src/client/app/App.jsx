@@ -16,10 +16,10 @@ import {
   EmpMain,
   EmpHow,
   EmpPrice,
+  EmpDemo,
   Login,
   ForgotPass,
   SignUp,
-  EmpDemo,
 } from './component';
 
 function App() {

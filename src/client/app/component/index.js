@@ -5,7 +5,6 @@ import AuthDemo from './AuthDemo';
 import { Jobs } from './JobsMain';
 import { JobDetails } from './JobDetails';
 import { EmpMain, EmpHow, EmpPrice } from './Employer';
-import { EmpMain, EmpHow, EmpPrice } from './Employer';
 import Login from './Login/LoginPage';
 import ForgotPass from './Login/ForgotPassword';
 import SignUp from './Login/SignUp';
