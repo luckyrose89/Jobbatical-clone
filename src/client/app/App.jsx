@@ -16,6 +16,7 @@ import {
   EmpMain,
   EmpHow,
   EmpPrice,
+  EmpDemo,
 } from './component';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/employer/createjob" component={InputPage} />
+        <Route path="/employer/demo" component={EmpDemo} />
         <Route path="/employer/how-it-works" component={EmpHow} />
         <Route path="/employer/pricing" component={EmpPrice} />
         <Route path="/employer" component={EmpMain} />

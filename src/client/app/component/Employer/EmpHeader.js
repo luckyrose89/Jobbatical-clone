@@ -35,7 +35,7 @@ class EmpHeading extends Component {
 									<a href="/employer/createjob">List Openings</a>
 								</li>
 								<li>
-									<a href="/">Request A Demo</a>
+									<a href="/employer/demo">Request A Demo</a>
 								</li>
 							</ul>
 						</div>
