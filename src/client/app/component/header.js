@@ -9,8 +9,8 @@ class Heading extends Component {
 						<section className="navbar-header visible-xs">
 							<a href="/" className="navbar-brand">JobsOnTheGo</a>
 							<div className="pull-right navbar-right">
-								<a href="/">Log In</a>
-								<a href="/">Join</a>
+								<a href="/login">Log In</a>
+								<a href="/signup">Join</a>
 							</div>
 						</section>
 						<div className="hidden-xs">
@@ -24,7 +24,7 @@ class Heading extends Component {
 							</ul>
 							<ul className="nav navbar-nav navbar-right">
 								<li>
-									<a href="/">Log In</a>
+									<a href="/login">Log In</a>
 								</li>
 								<li>
 									<a href="/">Join</a>
