@@ -21,8 +21,8 @@ class CreateJob extends Component {
   handleSubmit(values) {
     console.log('this', this)
     console.log('values', values)
-  //   // const { dispatch, values } = this.props
-  //   // dispatch(createNewJob(values))
+    const { dispatch } = this.props
+    dispatch(createNewJob(values))
   }
 
    render() {

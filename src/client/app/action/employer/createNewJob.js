@@ -15,7 +15,7 @@ console.log('creating post request with', values);
   }).then(res => res.json())
     .then(json => {
       if (json.name) {
-        return createNewJobSuccess(json.name);
+        return createNewJobSuccess(json);
       } else {
         return createNewJobFailure(json.error);
       }
