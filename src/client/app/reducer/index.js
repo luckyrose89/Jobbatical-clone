@@ -8,6 +8,7 @@ import isLoggingIn from './isLoggingIn';
 import isLoggingOut from './isLoggingOut';
 import isSigningup from './isSigningup';
 import createNewJob from './createNewJob';
+import empMoreInfo from './empMoreInfo';
 import { reducer as reduxFormReducer } from 'redux-form';
 
 const rootReducer = combineReducers({
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   jobReducer,
   user,
   createNewJob,
+  empMoreInfo,
   isFetchingUser,
   isLoggingIn,
   isLoggingOut,

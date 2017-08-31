@@ -20,10 +20,12 @@ function isPostingJob(state = false, action) {
   }
 }
 
-function postJob(state = null, action) {
+function postJob(state = {}, action) {
   switch (action.type) {
     case CREATE_NEW_JOB_SUCCESS:
-      return action.payload.postJob;
+      return Object.assign({}, state, {
+         [action.payload.postJob.name]: action.payload.postJob
+      });
 
     case CREATE_NEW_JOB_FAILURE:
       return null;

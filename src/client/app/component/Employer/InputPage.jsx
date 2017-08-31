@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Values } from 'redux-form-website-template';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 
 import InputForm from './InputForm';
-import EmpHeading from './EmpHeader';
+import EmpHeader from './EmpHeader';
 import Footer from '../footer';
 
 import {createNewJob} from '../../action';
@@ -19,8 +18,6 @@ class CreateJob extends Component {
   }
 
   handleSubmit(values) {
-    console.log('this', this)
-    console.log('values', values)
     const { dispatch } = this.props
     dispatch(createNewJob(values))
   }
@@ -28,8 +25,8 @@ class CreateJob extends Component {
    render() {
     return (
       <div>
-        <EmpHeading />
-        <InputForm onSubmit= {this.handleSubmit} />
+        <EmpHeader />
+        <InputForm onSubmit= {this.handleSubmit}/>
         <Footer />
       </div>
     )

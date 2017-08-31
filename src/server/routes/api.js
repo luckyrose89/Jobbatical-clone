@@ -122,7 +122,8 @@ router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource;
 	// logic setup to read data.oauth for User model, name for Job model, and email for Contact model
 	if (resource === 'contact') {
-		var id = req.body.email
+		var id = req.body.values.email
+		req.body = req.body.values
 	} else if (resource === 'job'){
 		var id = req.body.values.name
 		req.body = req.body.values

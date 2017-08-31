@@ -58,4 +58,10 @@ export {
   createNewJobSuccess,
   CREATE_NEW_JOB_FAILURE,
   createNewJobFailure,
+  MORE_INFO,
+  moreInfo,
+  MORE_INFO_SUCCESS,
+  moreInfoSuccess,
+  MORE_INFO_FAILURE,
+  moreInfoFailure,
 } from './employer';

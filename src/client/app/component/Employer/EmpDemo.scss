@@ -1,0 +1,42 @@
+.contact-for-more {
+	padding: 20vh 10vw 15vh 10vw;
+}
+
+.demo {
+	background-color: #9F84BD;
+	height: 90vh;
+    padding-top: 50px;
+    margin-top: 80px;
+
+    background-image: url(../../../../../assets/images/demo.svg);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.more-button {
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: #ccafed;
+    font-size: 14px;
+    line-height: 32px;
+    color: black;
+    margin-top: 8px;
+}
+
+.more-email {
+	line-height: 32px;
+	padding-left: 4px;
+}
+
+.demo-title {
+	font-size: 2.5em;
+}
+
+.demo-content {
+	font-size: 1.4em;
+}
+
+.demo-content-detail {
+	font-size: 1em;
+}
