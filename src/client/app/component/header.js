@@ -1,36 +1,65 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import {
+  fetchUserStart,
+  fetchUserRequest,
+  logoutUserStart,
+  logoutUserRequest,
+} from '../action';
 
 class Heading extends Component {
+  constructor(props) {
+    super(props);
+    this.logout = this.logout.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.fetchUser();
+  }
+
+  logout() {
+    if (!this.props.isLoggingOut) {
+      this.props.logout();
+    }
+  }
+
 	render() {
 		return (
 			<header>
 				<div className="header-styles">
 					<div className="container-fluid">
 						<section className="navbar-header visible-xs">
-							<a href="/" className="navbar-brand">JobsOnTheGo</a>
+							<Link to="/" className="navbar-brand">JobsOnTheGo</Link>
 							<div className="pull-right navbar-right">
-								<a href="/login">Log In</a>
-								<a href="/signup">Join</a>
+								{!this.props.user && <Link to="/login">Log In</Link>}
+								{!this.props.user && <Link to="/signup">Join</Link>}
+                {this.props.user &&
+                  <Link to="/logout" onClick={this.logout}>Logout</Link>}
 							</div>
 						</section>
 						<div className="hidden-xs">
 							<ul className="nav navbar-nav">
 								<li className="logo">
-									<a href="/">JobsOnTheGo</a>
+									<Link to="/">JobsOnTheGo</Link>
 								</li>
 								<li className="hidden-xs">
-									<a href="/jobs">Explore Jobs</a>
+									<Link to="/jobs">Explore Jobs</Link>
 								</li>
 							</ul>
 							<ul className="nav navbar-nav navbar-right">
+								{!this.props.user && <li>
+									<Link to="/login">Log In</Link>
+								</li>}
+								{!this.props.user && <li>
+									<Link to="/signup">Join</Link>
+								</li>}
+                {this.props.user && <li>
+                  <Link to="/" onClick={this.logout}>Logout</Link>
+                </li>}
 								<li>
-									<a href="/login">Log In</a>
-								</li>
-								<li>
-									<a href="/signup">Join</a>
-								</li>
-								<li>
-									<a href="/employer">For The Employers</a>
+									<Link to="/employer">For The Employers</Link>
 								</li>
 							</ul>
 						</div>
@@ -41,4 +70,20 @@ class Heading extends Component {
 	}
 }
 
-export default Heading;
+const mapStateToProps = state => ({
+  user: state.user,
+  isLoggingOut: state.isLoggingOut,
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchUser: () => {
+    dispatch(fetchUserStart());
+    return dispatch(fetchUserRequest());
+  },
+  logout: () => {
+    dispatch(logoutUserStart());
+    return dispatch(logoutUserRequest());
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Heading);
