@@ -6,10 +6,10 @@ import FontAwesome from 'react-fontawesome';
 class EmpHowItWork extends Component {
 	render() {
 		return(
-			<section className='How-It-Works'>
+			<section className={ styles['How-It-Works'] }>
 				<div className={ styles['How-split'] }>
-					<div className={ styles["how-title"]}>
-						<h3>How-It-Works</h3>
+					<div>
+						<h3  className={ styles["how-title"]}>How-It-Works</h3>
 						<div className={ styles["how-detail"]}>
 							<FontAwesome
 						        className='super-crazy-colors'

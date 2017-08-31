@@ -1,19 +1,44 @@
 import React, {Component} from 'react';
-
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 import 'bootstrap/dist/css/bootstrap.css';
 
-
 import EmpHeader from './EmpHeader';
-import Demo from './Demo'
 import Footer from '../footer';
+import EmpRequestForm from'./empRequestForm';
 
-export class EmpDemo extends Component{
+import { moreInfo } from '../../action';
+import styles from './EmpDemo.scss';
+
+class EmpDemo extends Component{
+	constructor(props) {
+      super(props)
+      this.handleSubmit = this.handleSubmit.bind(this)
+  	}
+
+  	componentDidMount(props) {
+ 	}
+
+	handleSubmit(values) {
+		const { dispatch } = this.props
+		var newValue = Object.assign({},values,{'inquiry':'demo'})
+	    dispatch(moreInfo(newValue))
+	}
 
 	render() {
 		return(
 			<div>
 				<EmpHeader />
-				<Demo />
+				<section className={ styles['demo']} >
+					<div className={ styles['contact-for-more'] }>
+						<h3 className={ styles['demo-title'] }>Demo Time</h3>
+						<div className={ styles['demo-content'] }>Contact Us for a fabulous demo
+							<div className={ styles['demo-content-detail'] }>Our team will demostrate the work flow </div>
+							<div className={ styles['demo-content-detail'] }>along with some real success examples </div>
+						</div>
+						<EmpRequestForm onSubmit = { this.handleSubmit }/>
+					</div>
+				</section>
 				<Footer />
 			</div>
 		)

@@ -11,7 +11,7 @@ class EmpHeading extends Component {
 							<div className="pull-right navbar-right">
 								<a href="/">JobsOnTheGo</a>							
 								<a href="/employer/createjob">List Openings</a>
-								<a href="/">Request A Demo</a>
+								<a href="/employer/demo"> Demo</a>
 
 							</div>
 						</section>
@@ -35,7 +35,7 @@ class EmpHeading extends Component {
 									<a href="/employer/createjob">List Openings</a>
 								</li>
 								<li>
-									<a href="/employer/demo">Request A Demo</a>
+									<a href="/employer/demo">Demo</a>
 								</li>
 							</ul>
 						</div>

@@ -1,0 +1,47 @@
+.contact-for-more {
+	padding: 25vh 10vw 15vh 10vw;
+}
+
+.emp-request-form {
+	background-color: #9F84BD;
+	height: 90vh;
+    padding-top: 50px;
+    margin-top: 80px;
+
+    background-image: url(../../../../../assets/images/money.svg);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.more-button {
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: #ccafed;
+    font-size: 14px;
+    line-height: 32px;
+    color: black;
+    margin-top: 8px;
+}
+
+.more-email {
+	line-height: 32px;
+	padding-left: 4px;
+    width: 240px;
+}
+
+.pricing-title {
+	font-size: 2.5em;
+}
+
+.pricing-content {
+	font-size: 1em;
+}
+
+.pricing-content-detail {
+	font-size: 1em;
+}
+
+.more-hidden {
+    display: none;
+}

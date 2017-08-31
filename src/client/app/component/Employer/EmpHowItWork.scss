@@ -1,3 +1,15 @@
+.How-It-Works {
+	background-color: #9F84BD;
+	height: 110vh;
+    padding-top: 10px;
+    margin-top: 80px;
+
+    background-image: url(../../../../../assets/images/how.svg);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .How-split {
 	padding-top: 15vh;
 }
@@ -7,13 +19,18 @@
 }
 
 .how-detail {
+	margin-left: 15vw;
 	padding: 10px;
+	width: 70vw;
+	display: inline-block;
+	font-size: 1.5em;
 }
 
 .how-title {
-	margin: 10vh 15vw;
+	margin: 2vh 15vw;
 	width: 70vw;
 	display: inline-block;
+	font-size: 3em;
 }
 
 .how-background {
