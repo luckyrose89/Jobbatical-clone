@@ -1,3 +1,5 @@
+import FontAwesome from 'react-fontawesome';
+
 import React, {Component} from 'react';
 
 class Footer extends Component {
@@ -57,32 +59,60 @@ class Footer extends Component {
 								<li>
 									<a>Facebook</a>
 									<span className="socialIcon">
-										<img src="../../../../assets/images/facebook.png"/>
+										<img src=""/>
+										<FontAwesome
+									        className='social'
+									        name='facebook-official'
+									        size='2x'
+									        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+									    />
 									</span>
 								</li>
 								<li>
 									<a>Twitter</a>
 									<span className="socialIcon">
-										<img src="../../../../assets/images/twitter.png"/>
+										<img src=""/>
+										<FontAwesome
+									        className='social'
+									        name='twitter-square'
+									        size='2x'
+									        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+									    />
 									</span>
 								</li>
 								<li>
 									<a>Google Plus</a>
 									<span className="socialIcon">
-										<img src="../../../../assets/images/google-plus.png"/>
+										<img src=""/>
+										<FontAwesome
+									        className='social'
+									        name='google-plus-official'
+									        size='2x'
+									        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+									    />
 									</span>
 								</li>
 								<li>
 									<a>Instagram</a>
 									<span className="socialIcon">
-										<img src="../../../../assets/images/instagram.png"/>
-									</span>
+										<img src=""/>
+										<FontAwesome
+									        className='social'
+									        name='instagram'
+									        size='2x'
+									        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+									    />									</span>
 								</li>
 								<li>
 									<a href="/">LinkedIn</a>
 									<span className="socialIcon">
-										<img src="../../../../assets/images/linkedin.png"/>
-									</span>
+										<img src=""/>
+										<FontAwesome
+									        className='social'
+									        name='linkedin-square'
+									        size='2x'
+									        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+									    />									</span>
 								</li>
 							</ul>
 						</div>
