@@ -15,8 +15,7 @@ class CreateJob extends Component {
       this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    const { dispatch } = this.props
+  componentDidMount(props) {
   }
 
   handleSubmit(values) {
