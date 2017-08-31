@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 import { Values } from 'redux-form-website-template';
 import { connect } from 'react-redux';
-import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types'
+
 import InputForm from './InputForm';
 import EmpHeading from './EmpHeader';
 import Footer from '../footer';
-import createNewJob from './createNewJob';
+
+import {createNewJob} from '../../action';
 
 class CreateJob extends Component {
   constructor(props) {
-    super(props)
+      super(props)
+      this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  componentDidMount() {
+    const { dispatch } = this.props
+  }
+
+  handleSubmit(values) {
+    console.log('this', this)
+    console.log('values', values)
+  //   // const { dispatch, values } = this.props
+  //   // dispatch(createNewJob(values))
+  }
+
    render() {
     return (
       <div>
         <EmpHeading />
-        <InputForm onSubmit={createNewJob} />
+        <InputForm onSubmit= {this.handleSubmit} />
         <Footer />
       </div>
     )
@@ -28,6 +42,12 @@ CreateJob.propTypes = {
 }
 
 function mapStateToProps(state) {
+  const { isPostingJob, postJob } = state.createNewJob
+
+  return {
+    isPostingJob,
+    postJob,
+  }
 }
 
 export default connect(mapStateToProps)(CreateJob)

@@ -122,9 +122,9 @@ router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource;
 	// logic setup to read data.oauth for User model, name for Job model, and email for Contact model
 	if (resource === 'contact') {
-		var id = {'email':req.body.email}
+		var id = req.body.email
 	} else if (resource === 'job'){
-		var id = {'name':req.body.values.name}
+		var id = req.body.values.name
 		req.body = req.body.values
 	} else {
 		var id = {'data.oauth':req.body.data.oauth}
@@ -132,7 +132,7 @@ router.post('/:resource', function(req, res, next){
 	// var id = req.body.data? req.body.data.oauth : req.body.values.name;
 	console.log('id is',id)
 	console.log("resource ", resource)
-
+	console.log("values ", req.body)
 	// adjust post request from Redux-form
 	// if (resource == 'job') {
 	// 	req.body = req.body.values

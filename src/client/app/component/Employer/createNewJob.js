@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
+export const CREATE_NEW_JOB = 'CREATE_NEW_JOB';
+
 export default (async function createNewJob(values) {
 console.log('creating post request with', values);
   return fetch('/api/job', {

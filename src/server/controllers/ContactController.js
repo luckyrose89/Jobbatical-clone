@@ -30,7 +30,7 @@ module.exports = {
 	      setDefaultsOnInsert: true,
 	    };
 
-		Contact.findOneAndUpdate(queries, params, options, function(err, contact){
+		Contact.findOneAndUpdate({'email':queries}, params, options, function(err, contact){
 			console.log('the query is',queries)
 			console.log('the params is', params)
 			if (err){
