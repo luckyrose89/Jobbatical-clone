@@ -11,7 +11,7 @@ class EmpHeading extends Component {
 							<div className="pull-right navbar-right">
 								<a href="/">JobsOnTheGo</a>							
 								<a href="/employer/createjob">List Openings</a>
-								<a href="/"> Demo</a>
+								<a href="/employer/demo"> Demo</a>
 
 							</div>
 						</section>
