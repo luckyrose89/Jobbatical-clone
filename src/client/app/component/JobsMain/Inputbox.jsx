@@ -35,7 +35,7 @@ export default class Inputbox extends Component {
             inputProps={{className:styles['search-input']}}
             renderItem={(item, highlighted) =>
               <div
-                className={ style.autocomplete }
+                className={ styles.autocomplete }
                 key={item.id}
                 style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
               >

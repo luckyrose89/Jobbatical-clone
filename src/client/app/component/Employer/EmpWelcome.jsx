@@ -8,9 +8,9 @@ class EmpWelcome extends Component {
 			<section className={ styles['landing'] }>
 				<div className={ styles["landing-title"]}>
 					<h1>
-						Reach Talents
+						<strong>Reach Talents
 						<br/>
-						<strong>Enhance Your Team</strong>
+						Enhance Your Team</strong>
 					</h1>
 
 					<h4 className={ styles["tagline"] }>Booster! JobsOnTheGo connects you with top talents around the world!</h4>

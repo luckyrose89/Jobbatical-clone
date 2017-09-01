@@ -49,3 +49,19 @@ export {
   fetchJobs,
   fetchJobsIfNeeded,
 } from './job';
+
+// actions for employer page
+export {
+  CREATE_NEW_JOB,
+  createNewJob,
+  CREATE_NEW_JOB_SUCCESS,
+  createNewJobSuccess,
+  CREATE_NEW_JOB_FAILURE,
+  createNewJobFailure,
+  MORE_INFO,
+  moreInfo,
+  MORE_INFO_SUCCESS,
+  moreInfoSuccess,
+  MORE_INFO_FAILURE,
+  moreInfoFailure,
+} from './employer';
