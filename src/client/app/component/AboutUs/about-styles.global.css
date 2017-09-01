@@ -1,0 +1,163 @@
+/*****General Styles*****/
+
+.clear {
+    clear: both;
+    height: 0;
+    display: block;
+}
+
+.spacing {
+	width: 80%;
+    margin: 0 auto;
+}
+
+/*************************/
+/*****About Us Styles*****/
+/*************************/
+
+.about-body {
+	background: #fff;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: inset 0px 1px 46px -4px #D9D9D9,1px 1px 5px 1px #DDDDDD;
+	-webkit-box-shadow: inset 0px 1px 46px -4px #D9D9D9,1px 1px 5px 1px #DDDDDD;
+	-moz-box-shadow: inset 0px 1px 46px -4px #D9D9D9,1px 1px 5px 1px #DDDDDD;
+}
+
+.about-header {
+	font-size: 32px;
+    line-height: 32px;
+    padding: 54px 19px 36px;
+    text-shadow: #fff 0 1px 0;
+    font-weight: lighter;
+    color: #1d1916;
+    text-align: left;
+}
+
+.about-intro {
+	background: #fff;
+    position: relative;
+    z-index: 1015;
+    margin: 0;
+}
+
+.about-intro .wrap {
+    position: relative;
+    margin-bottom: 70px; 
+}
+
+.about-intro h2 {
+	font-size: 22px;
+    line-height: 36px;
+    padding: 10px 19px 122px;
+    color: #4d4034;
+    background: #fff;
+    padding-bottom: 88px;
+    text-align: justify;
+}
+
+.teammate {
+	color: #8e7a6f;
+    padding: 16px 19px;
+    margin-bottom: 25px;
+    padding-left: 60px;
+    font-size: 17px;
+}
+
+.teammate img {
+	height: 105px;
+    background: #eee;
+	float: left;
+    width: 105px;
+    margin-right: 19px;
+    border-radius: 55px;
+    margin-top: -4px;
+}
+
+.teammate b {
+	margin-top: 10px;
+	display: block;
+    color: #1d1916;
+}
+
+.teammate p {
+	margin-top: 12px;
+}
+
+.teammate-right {
+	color: #8e7a6f;
+    padding: 16px 19px;
+    margin-bottom: 25px;
+    font-size: 17px;
+	text-align: right;
+    padding-left: 0;
+    padding-right: 60px;
+}
+
+.teammate-right img {
+	height: 105px;
+    background: #eee;
+    width: 105px;
+    border-radius: 55px;
+    margin-top: -4px;
+	float: right;
+    margin-right: 0;
+    margin-left: 19px;
+}
+
+.teammate-right b {
+	margin-top: 10px;
+	display: block;
+    color: #1d1916;
+}
+
+.teammate-right p {
+	margin-top: 12px;
+}
+
+/*****Media Queries*****/
+
+@media(max-width: 776px){
+
+	.about-header h1 {
+		font-size: 28px;
+	    line-height: 28px;
+	 }
+
+	 .about-intro h2 {
+		font-size: 20px;
+		line-height: 28px;
+	 }
+
+	 .teammate {
+	 	border-bottom: 1px solid #eee;
+	 	padding-bottom: 28px;
+	 }
+
+
+	 .teammate-right {
+		text-align: left;
+		border-bottom: 1px solid #eee;
+		color: #8e7a6f;
+	    padding: 16px 19px;
+	    margin-bottom: 25px;
+	    padding-left: 60px;
+	    font-size: 17px;
+	    padding-right: 19px;
+	    padding-bottom: 28px;
+	 }
+
+	 .teammate-right img {
+	 	height: 105px;
+	    background: #eee;
+		float: left;
+	    width: 105px;
+	    margin-right: 19px;
+	    border-radius: 55px;
+	    margin-top: -4px;
+	    margin-left: 0;
+	    margin-bottom: 8px;
+	 }
+}
