@@ -1,0 +1,34 @@
+.apply-form {
+    margin: 20px 18vw 20px 18vw;
+    width: 64vw;
+    border: 1px solid rgba(155,80,148,0.5);
+    background-color: #F4F4F6;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+}
+
+.input-single:focus, .input-textarea:focus {
+    background-color: #F7FFF7;
+}
+
+.input-single {
+    padding: 2px;
+    margin: 0px 2px 3px 7px;
+}
+
+.job-form > form > div > label {
+    margin: 12px 2px 1px 0px;
+}
+
+.input-textarea {
+    padding: 1px;
+    margin: 0px 2px 3px 0px;
+    width: 57vw;
+    height: 100px
+}
+
+.form-err {
+    padding: 5px;
+    background-color: rgb(252, 141, 141);
+    border-radius: 50px;
+}

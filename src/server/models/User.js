@@ -30,7 +30,7 @@ var UserSchema = new mongoose.Schema({
 		},
 		applied: [{
 	      job: {
-	        type: mongoose.Schema.Types.ObjectId
+	      	
 	      }
 	    }]
 	}

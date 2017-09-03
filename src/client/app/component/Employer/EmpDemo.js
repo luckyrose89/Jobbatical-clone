@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import EmpHeader from './EmpHeader';
 import Footer from '../footer';
-import EmpRequestForm from'./empRequestForm';
+import EmpRequestForm from'./EmpRequestForm';
 
 import { moreInfo } from '../../action';
 import styles from './EmpDemo.scss';

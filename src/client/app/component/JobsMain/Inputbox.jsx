@@ -50,8 +50,8 @@ export default class Inputbox extends Component {
           <input className= { styles['search-button'] } type="button" onClick={e => onClick(this.state.value)} value="Search Jobs" />
           <h6>Current Search Keyword: {value}</h6>
           <p>
-            {isFetching && jobs.length === 0 && <h2>Loading...</h2>}
-            {!isFetching && jobs.length === 0 && <h4>No match found. <br/>Try different keyword.</h4>}
+            {isFetching && jobs.length === 0 && <span>Loading...</span>}
+            {!isFetching && jobs.length === 0 && <span>No match found. <br/>Try different keyword.</span>}
             {lastUpdated &&
               <span>
                 Last updated at {new Date(lastUpdated).toLocaleTimeString()}.

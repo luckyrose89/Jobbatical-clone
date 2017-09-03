@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 
 import Header from '../header';
@@ -120,9 +121,11 @@ export class JobDetails extends React.Component {
             <button className={'btn btn-default ' + styles['save-btn']}>
               Save for later
             </button>
+            <Link to={"/job/apply/"+ job._id }>
             <button className={'btn btn-default ' + styles['apply-btn']}>
               APPLY NOW
             </button>
+            </Link>
           </div>
         </div>
       );

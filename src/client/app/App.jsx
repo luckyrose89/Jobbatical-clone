@@ -20,13 +20,13 @@ import {
   Login,
   ForgotPass,
   SignUp,
+  ApplyJob,
 } from './component';
 
 function App() {
   return (
     <Router>
       <Switch>
-
         <Route exact path="/" component={Landing} />
         <Route path="/example" component={Example} />
         <Route path="/employer/createjob" component={InputPage} />
@@ -36,6 +36,7 @@ function App() {
         <Route path="/employer" component={EmpMain} />
         <Route path="/auth-demo" component={AuthDemo} />
         <Route path="/jobs" component={Jobs} />
+        <Route path="/job/apply/:id" component={ApplyJob} />
         <Route path="/job/:id" component={JobDetails} />
         <Route path="/login" component={Login} />
         <Route path="/forgot" component={ForgotPass} />

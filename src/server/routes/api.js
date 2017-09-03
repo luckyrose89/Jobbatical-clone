@@ -41,7 +41,7 @@ router.get('/:resource', function(req, res, next){
 router.get('/:resource/:id', function(req, res, next){
 	var resource = req.params.resource;
 	var id = req.params.id;
-
+	console.log(id)
 	var controller = controllers[resource]
 	if (controller == null){
 	res.json({
@@ -160,6 +160,7 @@ router.post('/:resource', function(req, res, next){
 	})
 })
 
+// generate random listing
 router.get('/:resource/featured/:count', function(req, res, next){
 	var resource = req.params.resource;
 	var count = parseInt(req.params.count);
@@ -184,5 +185,26 @@ router.get('/:resource/featured/:count', function(req, res, next){
 		res.json(result)
 	})
 })
+
+// For adding application to User
+// router.post('/user/apply', function(req, res, next){
+// 	var id = req.body.values.user
+// 	req.body = req.body.values.input
+// 	console.log('id is',id)
+// 	console.log("values ", req.body)
+
+// 	// need to fix $push 
+// 	// users.findOneAndUpdate({"_id":"59aaa09d8de1340e6862963b"}, {$push: {"data.applied" :"456"}}, {upsert: true, 'new': true})
+// 	User.findOneAndUpdate({"_id":id}, {$push:{"data.applied" :req.body}}, function(err, result){
+// 		if (err){
+// 			res.json({
+// 				confirmation: 'fail',
+// 				message: err
+// 			})
+// 			return
+// 		}
+// 		res.json(result)
+// 	})
+// })
 
 module.exports = router;
