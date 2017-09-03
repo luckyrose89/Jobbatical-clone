@@ -40,7 +40,7 @@ class Footer extends Component {
 							<strong>JobsOnTheGo</strong>
 							<ul>
 								<li>
-									<a href="/">Our Story & People</a>
+									<a href="/about">Our Story & People</a>
 								</li>
 								<li>
 									<a href="/">Support</a>

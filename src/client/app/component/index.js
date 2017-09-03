@@ -8,5 +8,7 @@ import { EmpMain, EmpHow, EmpPrice, EmpDemo } from './Employer';
 import Login from './Login/LoginPage';
 import ForgotPass from './Login/ForgotPassword';
 import SignUp from './Login/SignUp';
+import About from './AboutUs/About'
 
-export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp };
+export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About };
+
