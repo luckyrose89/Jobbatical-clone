@@ -4,5 +4,5 @@ export function saveApplicationFailure(err) {
   return {
     type: SAVE_APPLICATION_FAILURE,
     payload: { err },
-  };
+  }
 }

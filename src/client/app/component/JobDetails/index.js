@@ -1,4 +1,5 @@
 import JobDetails from './JobDetails';
 import ApplyJob from './ApplyJob';
+import ApplyThankYou from './ApplyThankYou';
 
-export { JobDetails, ApplyJob };
+export { JobDetails, ApplyJob, ApplyThankYou };

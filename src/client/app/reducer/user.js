@@ -14,11 +14,13 @@ export default function user(state = null, action) {
     case SIGNUP_USER_SUCCESS:
     case LOGIN_USER_SUCCESS:
     case FETCH_USER_SUCCESS:
-    case SAVE_APPLICATION_SUCCESS:
       return action.payload.user;
 
+    case SAVE_APPLICATION_SUCCESS:
+      return action.payload.application;
+
     case SAVE_APPLICATION_FAILURE:
-      return state;
+      return action.payload.err;
 
     case LOGOUT_USER_SUCCESS:
     case LOGIN_USER_FAILURE:

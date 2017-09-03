@@ -22,6 +22,7 @@ import {
   SignUp,
   About,
   ApplyJob,
+  ApplyThankYou,
 } from './component';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/employer" component={EmpMain} />
         <Route path="/auth-demo" component={AuthDemo} />
         <Route path="/jobs" component={Jobs} />
+        <Route path="/job/apply/:id/:name/thankyou" component={ApplyThankYou} />
         <Route path="/job/apply/:id" component={ApplyJob} />
         <Route path="/job/:id" component={JobDetails} />
         <Route path="/login" component={Login} />

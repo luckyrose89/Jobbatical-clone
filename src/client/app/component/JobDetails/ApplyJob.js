@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 
@@ -17,6 +16,9 @@ export class ApplyJob extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      fireRedirect: false
+    }
   }
 
   componentWillMount() {
@@ -39,10 +41,12 @@ export class ApplyJob extends React.Component {
       "user": [currentUser._id],
     }
     this.props.saveData(newValue)
+    this.setState({ fireRedirect: true })
   }
 
   render() {
     const job = this.props.job;
+    const { fireRedirect } = this.state
     let card
     if (!this.props.job && this.props.isFetching) {
       card = <Loader />;
@@ -64,6 +68,9 @@ export class ApplyJob extends React.Component {
           { card }
         </div>
         <ApplicationForm onSubmit = { this.handleSubmit }/>
+        {fireRedirect && (
+          <Redirect to={'/job/apply/'+job._id+'/'+job.name+'/thankyou'} />
+        )}
         <Footer />
       </section>
     );
