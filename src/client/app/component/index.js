@@ -9,6 +9,6 @@ import Login from './Login/LoginPage';
 import ForgotPass from './Login/ForgotPassword';
 import SignUp from './Login/SignUp';
 import About from './AboutUs/About'
+import { SavedJobs } from './SavedJobs';
 
-export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About };
-
+export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About, SavedJobs };

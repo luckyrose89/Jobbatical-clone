@@ -47,6 +47,10 @@ class Heading extends Component {
 								<li className="hidden-xs">
 									<Link to="/jobs">Explore Jobs</Link>
 								</li>
+								<li className="hidden-xs">
+                  {this.props.user &&
+                    <Link to="/saved-jobs">Saved jobs</Link>}
+								</li>
 							</ul>
 							<ul className="nav navbar-nav navbar-right">
 								{!this.props.user && <li>
