@@ -23,6 +23,7 @@ import {
   About,
   ApplyJob,
   ApplyThankYou,
+  SavedJobs,
 } from './component';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/forgot" component={ForgotPass} />
         <Route path="/signup" component={SignUp} />
         <Route path="/about" component={About} />
+        <Route path="/saved-jobs" component={SavedJobs} />
         <Route path="/" component={Landing} />
         <Redirect to="/example" />
       </Switch>

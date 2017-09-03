@@ -29,6 +29,13 @@ var UserSchema = new mongoose.Schema({
 			type: String
 		},
 		applied: {}
+    saved: {
+      type: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Job',
+      }],
+      default: () => [],
+    },
 	}
 
 });

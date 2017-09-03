@@ -91,6 +91,16 @@ $btn-hover-color: #9b6095;
 .save-btn {
   color: $btn-color;
   margin-left: 16px;
+
+  &[disabled] {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $btn-color;
+      border-color: $btn-color;
+      background: #fff;
+    }
+  }
 }
 
 .company,

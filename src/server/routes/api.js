@@ -127,6 +127,8 @@ router.post('/:resource', function(req, res, next){
 	} else if (resource === 'job'){
 		var id = req.body.values.name
 		req.body = req.body.values
+  } else if (resource === 'user') {
+    var id = { _id: req.body._id };
 	} else {
 		var id = {'data.oauth':req.body.data.oauth}
 	}
