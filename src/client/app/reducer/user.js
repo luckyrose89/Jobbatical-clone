@@ -7,6 +7,7 @@ import {
   SIGNUP_USER_SUCCESS,
   SAVE_APPLICATION_SUCCESS,
   SAVE_APPLICATION_FAILURE,
+  SAVE_JOB_SUCCESS,
 } from '../action';
 
 export default function user(state = null, action) {
@@ -15,6 +16,7 @@ export default function user(state = null, action) {
     case LOGIN_USER_SUCCESS:
     case FETCH_USER_SUCCESS:
     case SAVE_APPLICATION_SUCCESS:
+    case SAVE_JOB_SUCCESS:
       return action.payload.user;
 
     case SAVE_APPLICATION_FAILURE:

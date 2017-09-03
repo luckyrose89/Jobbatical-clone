@@ -32,7 +32,14 @@ var UserSchema = new mongoose.Schema({
 	      job: {
 	      	
 	      }
-	    }]
+	    }],
+    saved: {
+      type: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Job',
+      }],
+      default: () => [],
+    },
 	}
 
 });
