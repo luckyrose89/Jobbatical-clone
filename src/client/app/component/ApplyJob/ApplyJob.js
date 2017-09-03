@@ -6,7 +6,7 @@ import propTypes from 'prop-types';
 
 import Header from '../header';
 import Footer from '../footer';
-import Loader from './Loader';
+import Loader from '../JobDetails/Loader';
 import ApplicationForm from './ApplicationForm'
 import styles from './ApplyJob.scss';
 import { fetchJobsIfNeeded } from '../../action';

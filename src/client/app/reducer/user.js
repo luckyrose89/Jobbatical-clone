@@ -22,8 +22,6 @@ export default function user(state = null, action) {
       return action.payload.application;
 
     case SAVE_APPLICATION_FAILURE:
-      return action.payload.err;
-
     case LOGOUT_USER_SUCCESS:
     case LOGIN_USER_FAILURE:
     case FETCH_USER_FAILURE:

@@ -28,7 +28,7 @@ var UserSchema = new mongoose.Schema({
 			//maybe a way to hash before storing into db
 			type: String
 		},
-		applied: {},
+		applied: [],
     saved: {
       type: [{
         type: mongoose.Schema.Types.ObjectId,

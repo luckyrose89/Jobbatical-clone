@@ -145,7 +145,7 @@ export class JobDetails extends React.Component {
               disabled={disableSave}
             >{saveText}</button>
             <Link to={"/job/apply/"+ job._id }>
-            <button className={'btn btn-default ' + styles['apply-btn']}>
+            <button className={'btn btn-default ' + styles['apply-btn']} disabled={!this.props.user} title="Please Log In">
               APPLY NOW
             </button>
             </Link>
