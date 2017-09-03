@@ -32,3 +32,25 @@
     background-color: rgb(252, 141, 141);
     border-radius: 50px;
 }
+
+@media(max-width: 776px){
+    .job-form {
+        margin: 180px 9vw 20px 9vw;
+        width: 80vw;
+        border: 1px solid rgba(155,80,148,0.5);
+        background-color: #F4F4F6;
+        border-radius: 10px;
+        padding: 5px 5px 5px 10px;
+    }
+    .job-form h2 {
+        font-size: 24px;
+    }
+    .job-form h4 {
+        font-size: 18px;
+    }
+    .input-textarea {
+        margin: 0px 2px 3px 0px;
+        width: 70vw;
+        height: 100px
+    }
+}

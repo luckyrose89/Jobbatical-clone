@@ -108,8 +108,8 @@ const ApplicationForm = props => {
         </div>
 
         <div>
-          <button type="submit" disabled={pristine || submitting}>Submit</button>
-          <button type="button" disabled={pristine || submitting} onClick={reset}>
+          <button type="submit" className={ styles['application-btn'] } disabled={pristine || submitting}>Submit</button>
+          <button type="button" className={ styles['application-btn'] } disabled={pristine || submitting} onClick={reset}>
             Clear Values
           </button>
         </div>

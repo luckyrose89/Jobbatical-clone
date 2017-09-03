@@ -32,3 +32,29 @@
     background-color: rgb(252, 141, 141);
     border-radius: 50px;
 }
+
+.application-btn {
+    margin-left: 4px;
+    background-color: #9b5094;
+    color: #fff;
+    letter-spacing: .07px;
+    border-radius: 5px;
+}
+
+@media(max-width: 776px){
+    .apply-form {
+        margin: 20px 9vw 20px 9vw;
+        width: 80vw;
+    }
+    .apply-form h2 {
+        font-size: 24px;
+    }
+    .apply-form h4 {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .input-textarea {
+        width: 70vw;
+        height: 100px
+    }
+}

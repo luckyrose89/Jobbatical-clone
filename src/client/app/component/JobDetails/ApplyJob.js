@@ -62,8 +62,9 @@ export class ApplyJob extends React.Component {
         )
     }
     return (
-      <section>
-        <Header />
+      <div>
+      <Header />
+      <section className={styles['job-application']}> 
         <div>
           { card }
         </div>
@@ -73,6 +74,7 @@ export class ApplyJob extends React.Component {
         )}
         <Footer />
       </section>
+      </div>
     );
   }
 }

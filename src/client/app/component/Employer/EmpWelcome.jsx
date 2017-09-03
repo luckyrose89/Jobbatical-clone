@@ -19,10 +19,9 @@ class EmpWelcome extends Component {
 							List An Opening
 						</a>
 						<br/>
-
-						<input type="text" placeholder="youremail@mail.com" className={ styles["landing-options-input"]}/>
-						<input type="button"value="Request Demo" className={ styles["landing-options-input-btn"]}/>
-
+						<a href="/employer/demo" className={ styles["landing-options-btn"]} >
+							Request Demo
+						</a>
 					</div>
 
 				</div>

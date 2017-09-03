@@ -4,10 +4,11 @@
 }
 
 .demo {
+    color : #fff;
 	background-color: #9F84BD;
 	height: 90vh;
     padding-top: 50px;
-    margin-top: 80px;
+    margin-top: 20px;
 
     background-image: url(../../../../../assets/images/demo.svg);
     background-position: bottom right;
@@ -31,7 +32,8 @@
 }
 
 .demo-title {
-	font-size: 2.5em;
+	font-size: 48px;
+    margin: 10px auto 30px auto;
 }
 
 .demo-content {
@@ -40,4 +42,10 @@
 
 .demo-content-detail {
 	font-size: 1em;
+}
+
+@media(max-width: 776px){
+    .demo {
+        height: 98vh
+        }
 }

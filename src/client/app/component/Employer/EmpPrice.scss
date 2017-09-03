@@ -4,10 +4,11 @@
 }
 
 .pricing {
+    color : #fff;
 	background-color: #9F84BD;
 	height: 90vh;
     padding-top: 50px;
-    margin-top: 80px;
+    margin-top: 40px;
 
     background-image: url(../../../../../assets/images/money.svg);
     background-position: bottom right;
@@ -32,6 +33,7 @@
 
 .pricing-title {
 	font-size: 4.5em;
+    margin: 10px auto 30px auto;
 }
 
 .pricing-content {
@@ -40,4 +42,10 @@
 
 .pricing-content-detail {
 	font-size: 1em;
+}
+
+@media(max-width: 776px){
+    .pricing {
+        height: 98vh
+    }
 }
