@@ -1,0 +1,103 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
+
+import Header from '../header';
+import Footer from '../footer';
+import Loader from './Loader';
+import ApplicationForm from './ApplicationForm'
+import styles from './ApplyJob.scss';
+import { fetchJobsIfNeeded } from '../../action';
+import { saveApplication } from '../../action';
+
+export class ApplyJob extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentWillMount() {
+    this.props.fetchData();
+  }
+
+  componentWillUnmount() {
+  }
+
+  handleSubmit(values) {
+    const job = this.props.job;
+    const currentUser = this.props.currentUser;
+    const { dispatch } = this.props
+    console.log(this)
+    var application = Object.assign({},values,{'jobTitle':job.name})
+    var newValue = {
+      input: {
+        [job._id]:{application},
+      },
+      "user": [currentUser._id],
+    }
+    this.props.saveData(newValue)
+  }
+
+  render() {
+    const job = this.props.job;
+    let card
+    if (!this.props.job && this.props.isFetching) {
+      card = <Loader />;
+    } else {
+      card = (
+        <div className={ styles['job-card'] }>
+          <img className={ styles['photo']} src={job.pictures} height='150' width='300'></img>
+          <h3>{job.name}</h3>
+          <h4><strong>{job.employmentType}</strong> at <strong>{job.jobLocation.addressCity}</strong>, <strong>{job.jobLocation.addressCountry}</strong></h4>
+          <h4>{job.description}</h4>
+          <h4>Responsibilities: {job.responsibilities}</h4>
+        </div>
+        )
+    }
+    return (
+      <section>
+        <Header />
+        <div>
+          { card }
+        </div>
+        <ApplicationForm onSubmit = { this.handleSubmit }/>
+        <Footer />
+      </section>
+    );
+  }
+}
+
+ApplyJob.propTypes = {
+};
+
+const mapStateToProps = (state, props) => {
+  let job = null;
+  let isFetching = true;
+  let currentUser = null;
+  if (state.jobReducer.jobsByKeyword.All) {
+    job = state.jobReducer.jobsByKeyword.All.items
+      .find(item => item._id === props.match.params.id);
+    isFetching = state.jobReducer.jobsByKeyword.All.isFetching;
+    console.log('job: ',job.name)
+    currentUser = state.user;
+    console.log('currentUser: ',currentUser)
+  }
+
+  return {
+    job,
+    isFetching,
+    currentUser,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      fetchData: () => dispatch(fetchJobsIfNeeded('All')),
+      saveData: (value) => dispatch(saveApplication(value)),
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ApplyJob);
