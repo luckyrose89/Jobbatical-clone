@@ -48,7 +48,10 @@ class Login extends Component {
 	render() {
     if (this.props.user) {
       // already logged in
-      return <Redirect to="/" />
+      const url = this.props.location.state ?
+        this.props.location.state.redirect :
+        '/';
+      return <Redirect to={url} />
     }
 
     const wrongPassword = this.state.hasTried && !this.props.isLoggingIn;

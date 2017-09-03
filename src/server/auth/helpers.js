@@ -20,7 +20,7 @@ export function isGuest(req, res, next) {
 
 export function sendUser(req, res) {
   const user = req.user.toObject();
-  delete user.data.oauth;
+  // delete user.data.oauth;
   res.json({ user });
 }
 

@@ -9,12 +9,17 @@ import Header from '../header';
 import Footer from '../footer';
 import Loader from './Loader';
 import styles from './JobDetails.scss';
-import { fetchJobsIfNeeded } from '../../action';
+import {
+  fetchJobsIfNeeded,
+  saveJobStart,
+  saveJobRequest,
+} from '../../action';
 
 export class JobDetails extends React.Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.saveJob = this.saveJob.bind(this);
     this.links = [
       { hash: '#job-details-summary', title: 'Role Summary' },
       { hash: '#job-details-responsibilities', title: 'Responsibilities' },
@@ -85,6 +90,15 @@ export class JobDetails extends React.Component {
       this.lastEl.getBoundingClientRect().bottom < window.innerHeight;
   }
 
+  saveJob() {
+    if (!this.props.user) {
+      const url = this.props.match.url;
+      this.props.history.push('/login', { redirect: url });
+    } else {
+      this.props.saveJob(this.props.user, this.props.match.params.id);
+    }
+  }
+
   render() {
     if (!this.props.job && !this.props.isFetching) {
       return <Redirect to="/jobs" />
@@ -112,15 +126,24 @@ export class JobDetails extends React.Component {
               '')}
         >{link.title}</HashLink>
       </li>);
+      const disableSave = this.props.isSaving || this.props.saved;
+      let saveText = 'Save for later';
+      if (this.props.saved) {
+        saveText = 'Saved';
+      } else if (this.props.isSaving) {
+        saveText = 'Saving...';
+      }
       const applyNow = (
         <div className={styles.apply}>
           <span className={styles.date}>
             Apply before <strong>{job.validThrough}</strong>
           </span>
           <div>
-            <button className={'btn btn-default ' + styles['save-btn']}>
-              Save for later
-            </button>
+            <button
+              className={'btn btn-default ' + styles['save-btn']}
+              onClick={this.saveJob}
+              disabled={disableSave}
+            >{saveText}</button>
             <Link to={"/job/apply/"+ job._id }>
             <button className={'btn btn-default ' + styles['apply-btn']}>
               APPLY NOW
@@ -255,6 +278,11 @@ JobDetails.propTypes = {
 };
 
 const mapStateToProps = (state, props) => {
+  const user = state.user;
+  const isSaving = state.isSavingJob;
+  const saved = user ?
+    user.data.saved.indexOf(props.match.params.id) > -1 :
+    false;
   let job = null;
   let isFetching = true;
   if (state.jobReducer.jobsByKeyword.All) {
@@ -264,13 +292,20 @@ const mapStateToProps = (state, props) => {
   }
 
   return {
+    user,
     job,
     isFetching,
+    isSaving,
+    saved,
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchData: () => dispatch(fetchJobsIfNeeded('All')),
+  saveJob: (user, jobID) => {
+    dispatch(saveJobStart());
+    return dispatch(saveJobRequest(user, jobID));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(JobDetails);
