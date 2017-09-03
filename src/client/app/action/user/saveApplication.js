@@ -14,12 +14,12 @@ console.log('creating post request with', values);
     body: JSON.stringify({ values }, null, 2),
   }).then(res => res.json())
     .then(json => {
-      // if (json.name) {
-      //   return saveApplicationSuccess(json);
-      // } else {
-      //   return saveApplicationFailure(json.error);
-      // }
-      console.log('this json: ', json)
+      if (json.data.applied) {
+        return saveApplicationSuccess(json);
+      } else {
+        return saveApplicationFailure(json.error);
+      }
+      console.log('this json: ',  json)
     }
     )
     .catch(err => saveApplicationFailure(err))
