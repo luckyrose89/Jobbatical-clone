@@ -1,0 +1,157 @@
+/*****Testimonial Page Styles*****/
+.grey {
+	background-color: #eee;
+	width: 100%;
+	padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.testimonial-header {
+	text-align: center;
+    margin-bottom: 64px;
+}
+
+.testimonial-header p {
+	max-width: 720px;
+    width: 100%;
+    padding: 8px 0 16px;
+    margin: 0 auto;
+    display: block;
+    color: #444;
+    line-height: 30px;
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.customer-story {
+	height: 720px;
+	position: relative;
+    border-radius: 3px;
+    background-clip: padding-box;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.customer-story-content {
+	height: 550px;
+	padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    background-image: url('../../../../../assets/images/business-map.svg');
+    background-repeat: no-repeat;
+    background-position: 30px center;
+}
+
+.logo-factorysoft {
+	width: 100%;
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+}
+
+.logo-factorysoft img {
+	max-width: 300px;
+    max-height: 80px;
+    text-align: center;
+}
+
+.customer-story-content .customer-header {
+	text-align: center;
+    padding: 20px;
+}
+
+.customer-header p {
+	color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+.customer-testimonial {
+	height: 400px;
+	width: 265px;
+    padding: 0 20px;
+    border-left: 1px solid #ddd;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.customer-testimonial-wrap {
+	width: 100%;    
+    position: relative;
+}
+
+.customer-quote {
+	color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.customer-img img {
+	width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-clip: padding-box;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.customer-name {
+	color: #222;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.customer-title {
+	color: #666;
+    font-weight: 400;
+    margin: 0;
+}
+
+.btn-read {
+	position: absolute;
+    bottom: 0;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.read-button {
+	background-color: #89867a;
+}
+
+.end-story h3 {
+	color: #444;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.btn-sign-up-today {
+	border-radius: 24px;
+    background-clip: padding-box;
+    line-height: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    color: #fff;
+    width: 100%;
+    max-width: 250px;
+    background-color: #57ba57;
+}

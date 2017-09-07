@@ -29,6 +29,9 @@ class EmpHeading extends Component {
 								<li className="hidden-xs">
 									<a href="/employer/pricing">Pricing</a>
 								</li>
+								<li className="hidden-xs">
+									<a href="/testimonial">Testimonial</a>
+								</li>
 							</ul>
 							<ul className="nav navbar-nav navbar-right">
 								<li>

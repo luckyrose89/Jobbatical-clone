@@ -12,5 +12,6 @@ import About from './AboutUs/About'
 import { SavedJobs } from './SavedJobs';
 import { AppliedJobs } from './AppliedJobs';
 import { ApplyJob, ApplyThankYou } from './ApplyJob';
+import Testimonial from './Testimonial/testimonial';
 
-export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, ApplyThankYou, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About, SavedJobs, AppliedJobs };
+export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, ApplyThankYou, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About, SavedJobs, AppliedJobs, Testimonial};
