@@ -29,17 +29,15 @@ passport.use(
       };
 
       const updates = {
-        profile: {
-          username: profile.username || profile.displayName,
-          picture: profile.photos && profile.photos.length > 0 ?
+        $set: {
+          'profile.username': profile.username || profile.displayName,
+          'profile.picture': profile.photos && profile.photos.length > 0 ?
             profile.photos[0].value :
             null,
-        },
-        data: {
-          oauth: profile.id,
-          loginMethod: 'facebook',
-          displayName: profile.displayName || profile.username,
-          email: profile.emails && profile.emails.length > 0 ?
+          'data.oauth': profile.id,
+          'data.loginMethod': 'facebook',
+          'data.displayName': profile.displayName || profile.username,
+          'data.email': profile.emails && profile.emails.length > 0 ?
             profile.emails[0].value :
             null,
         },
