@@ -11,6 +11,7 @@ import Header from '../header';
 import Footer from '../footer';
 import JobLister from '../JobsMain/JobLister';
 import styles from './SavedJobs.scss';
+import { saveApplication } from '../../action';
 
 class SavedJobs extends React.Component {
   constructor(props) {
@@ -45,6 +46,10 @@ class SavedJobs extends React.Component {
             jobs={jobs} 
             isFetching={!this.props.user}
           />}
+
+          {jobs.length > 0 && <Link to="/job/apply/all-saved"><p className={styles['apply-all-saved-jobs']}>
+          Apply to all saved job(s)!</p></Link>}
+
           {jobs.length === 0 && <p className={styles['empty-message']}>
             No saved jobs. <Link to="/jobs">Explore jobs here</Link>!
           </p>}
@@ -69,6 +74,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchUserStart());
     return dispatch(fetchUserRequest());
   },
+  saveData: (value) => dispatch(saveApplication(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SavedJobs);

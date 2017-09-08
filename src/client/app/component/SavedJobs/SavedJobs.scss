@@ -4,8 +4,23 @@
   font: 400 16px/1.5 "Roboto", sans-serif;
   color: rgba(0, 0, 0, .87);
   background-color: #f4f4f6;
+  text-align: center;
 }
 
 .empty-message {
   text-align: center;
+}
+
+.apply-all-saved-jobs {
+	display: inline-block;
+	background-color: #9F84BD;
+	color: #F7FFF7;
+	border-radius: 3px;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	font-size: 14px;
+	line-height: 10px;
+	padding: 14px 31px;
+	margin: 20px 2px;
+	width: 300px;
 }

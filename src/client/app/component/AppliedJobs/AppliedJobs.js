@@ -45,18 +45,28 @@ class AppliedJobs extends React.Component {
     return (
       <div>
         <Header />
-        <div className={styles['applied-title']}>
-        	<div>You are Awesome!!</div>
-        	<div>You have applied for the following jobs</div>
-        </div>
+
         <div className={styles['applied-jobs']}>
-          {jobs.length > 0 && <JobLister 
-            jobs={jobs} 
-            isFetching={!this.props.user}
-          />}
-          {jobs.length === 0 && <p className={styles['empty-message']}>
-            No saved jobs. <Link to="/jobs">Explore jobs here</Link>!
-          </p>}
+          {jobs.length > 0 && <section className={styles['empty-message']}>
+            <div className={styles['applied-title']}>
+              <div>You are awesome!!</div>
+              <div>You have applied for the following jobs!!</div>
+            </div>
+            {jobs.length > 0 && <JobLister 
+              jobs={jobs} 
+              isFetching={!this.props.user}
+            />}
+            <Link to="/jobs">Explore jobs here</Link>!
+          </section>}
+
+          {jobs.length === 0 && <section className={styles['empty-message']}>
+            <div className={styles['applied-title']}>
+              <div>You are almost there</div>
+              <div>Apply for your first job now!!</div>
+            </div>
+            <Link to="/jobs">Explore jobs here</Link>!
+          </section>}
+
         </div>
         <Footer />
       </div>
