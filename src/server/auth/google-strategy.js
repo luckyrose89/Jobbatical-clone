@@ -33,12 +33,13 @@ passport.use(
         null;
 
       const updates = {
-        profile: { username, picture },
-        data: {
-          email,
-          oauth: profile.id,
-          loginMethod: 'google',
-          displayName: username,
+        $set: {
+          'profile.username': username,
+          'profile.picture': picture,
+          'data.email': email,
+          'data.oauth': profile.id,
+          'data.loginMethod': 'google',
+          'data.displayName': username,
         },
       };
 
