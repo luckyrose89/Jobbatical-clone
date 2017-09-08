@@ -23,7 +23,7 @@ class Featured extends Component {
 						<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4" key={item._id.toString()}>
 							<Link to={"/job/" + item._id }>
 								<div className="jobCard">
-									<img className='job-picture' src={item.pictures}></img>
+									<div className='job-picture'><img className='job-image' src={item.pictures}></img></div>
 									<div className="job-desc">
 										<h4 key={item._id.toString()}>{item.name}</h4>
 										<p key={item.location} className="companyLoc">At <span className="company">{item.hiringOrganization.name}</span>, {item.hiringOrganization.location.addressCity}, {item.hiringOrganization.location.addressCountry}</p>
