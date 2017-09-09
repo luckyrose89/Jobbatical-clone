@@ -35,6 +35,7 @@ export class JobDetails extends React.Component {
   componentWillMount() {
     this.props.fetchData();
     window.addEventListener('scroll', this.handleScroll);
+    addthis.layers.refresh();
   }
 
   componentWillUnmount() {
