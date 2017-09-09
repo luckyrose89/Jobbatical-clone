@@ -171,8 +171,17 @@ h2.header {
 
 .jobCard .job-picture {
     margin-bottom: 10px;
-    height: 220px;
-    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.job-picture .job-image {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 .jobCard .job-desc {

@@ -13,5 +13,6 @@ import { SavedJobs } from './SavedJobs';
 import { AppliedJobs } from './AppliedJobs';
 import { ApplyJob, ApplyThankYou, ApplyAllSavedJob, ApplyAllSavedJobThankYou } from './ApplyJob';
 import Testimonial from './Testimonial/testimonial';
+import { SupportMain } from './Support';
 
-export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, ApplyThankYou, ApplyAllSavedJob, ApplyAllSavedJobThankYou, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About, SavedJobs, AppliedJobs, Testimonial};
+export { Landing, Example, AuthDemo, InputPage, Jobs, JobDetails, ApplyJob, ApplyThankYou, ApplyAllSavedJob, ApplyAllSavedJobThankYou, EmpMain, EmpHow, EmpPrice, EmpDemo, Login, ForgotPass, SignUp, About, SavedJobs, AppliedJobs, Testimonial, SupportMain};

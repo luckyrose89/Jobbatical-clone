@@ -20,9 +20,8 @@ class EmpDemo extends Component{
  	}
 
 	handleSubmit(values) {
-		const { dispatch } = this.props
 		var newValue = Object.assign({},values,{'inquiry':'demo'})
-	    dispatch(moreInfo(newValue))
+	    moreInfo(newValue)
 	}
 
 	render() {

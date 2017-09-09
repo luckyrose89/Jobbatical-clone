@@ -104,19 +104,24 @@ class SignUp extends Component {
 												</span>
 											</div>
 											<div className="form-signup row">
-												<div className="col-md-6 col-sm-6 col-xs-12">
-													<div className="form-signup zero-margin">
-														<label for="first-name">First Name</label>
-														<input type="text" placeholder="First Name" name="firstname" />
+												<div className="row">
+													<div className="col-md-6 col-sm-6 col-xs-12">
+														<div className="form-signup zero-margin">
+															<label for="first-name">First Name</label>
+															<input type="text" placeholder="First Name" name="firstname" />
+														</div>
 													</div>
 												</div>
-												<div className="col-md-6 col-sm-6 col-xs-12">
-													<div className="form-signup zero-margin">
-														<label for="last-name">Last Name</label>
-														<input type="text" placeholder="Last Name" name="lastname" />
+												<div className="row">
+													<div className="col-md-6 col-sm-6 col-xs-12">
+														<div className="form-signup zero-margin">
+															<label for="last-name">Last Name</label>
+															<input type="text" placeholder="Last Name" name="lastname" />
+														</div>
 													</div>
 												</div>
 												<div className="form-detail">
+												<div className="row">
 													<div className="col-md-12">
 														<label for="user">Your Email</label>
 														<input
@@ -127,7 +132,9 @@ class SignUp extends Component {
                             />
 													</div>
 												</div>
+												</div>
 												<div className="form-detail">
+												<div className="row">
 													<div className="col-md-12">
 														<label for="password">Password</label>
 														<input
@@ -136,6 +143,7 @@ class SignUp extends Component {
                               onChange={this.handlePasswordInput}
                             />
 													</div>
+												</div>
 												</div>
 												<div className="form-detail">
 													<div className="col-md-12">

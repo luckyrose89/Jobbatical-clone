@@ -23,31 +23,32 @@ class About extends Component {
 					<div className="about-intro">
 						<article className="wrap spacing">
 							<h2>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet tincidunt nibh, vitae fermentum urna. Nam mattis, urna quis tincidunt faucibus, sapien arcu finibus leo, id scelerisque lorem nunc at dui. Nulla ullamcorper ornare purus et commodo. Mauris euismod accumsan metus, sed ornare velit facilisis vitae. Mauris consequat, dolor in gravida dignissim, nulla sem euismod lacus, molestie hendrerit ex risus eu ex. Maecenas nec hendrerit quam, quis scelerisque metus. Nulla porta dui id ex lacinia facilisis. 
+								Our team is full of dedicated individuals that are determined to help you with finding an ideal job. We believe that every encounter with a new job is an opportunity for you to grow and advance. Life is too short to sit around and be complacent. 
+								<div>Live, Learn, and Upgrade! </div>
 							</h2>
 						</article>
 					</div>
 					<section className="teammate spacing">
 						<img src={boy} />
-						<b>abcdefg abcd</b>
+						<b>The Neighbor Next Door</b>
 						<p>Founder & CEO</p>
 					</section>
 					<p className="clear"></p>
 					<section className="teammate-right spacing">
 						<img src={girl} />
-						<b>panhdks shudj</b>
+						<b>The One Full of Motivations</b>
 						<p>Co-founder</p>
 					</section>
 					<p className="clear"></p>
 					<section className="teammate spacing">
 						<img src={man} />
-						<b>zabxjakxlklxl</b>
+						<b>The One Full of Ideas</b>
 						<p>Chief Product Officer</p>
 					</section>
 					<p className="clear"></p>
 					<section className="teammate-right spacing">
 						<img src={anothergirl} />
-						<b>shdahdijwkd</b>
+						<b>Master of Persuasion</b>
 						<p>Head of Sales</p>
 					</section>
 					<p className="clear"></p>
