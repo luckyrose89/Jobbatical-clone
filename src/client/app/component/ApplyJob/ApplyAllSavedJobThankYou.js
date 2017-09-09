@@ -8,7 +8,7 @@ import Header from '../header';
 import Footer from '../footer';
 import Loader from '../JobDetails/Loader';
 import ApplicationForm from './ApplicationForm'
-import styles from './ApplyAllSavedJob.scss';
+import styles from './ApplyAllSavedJobThankYou.scss';
 import { fetchJobsIfNeeded } from '../../action';
 import FontAwesome from 'react-fontawesome';
 
@@ -63,8 +63,8 @@ export class ApplyAllSavedJobThankYou extends React.Component {
       <div>
       <Header />
       <section className={styles['job-application']}> 
-        <div>You have applied for the following openings!</div>
-        <div className={styles['all-job-list']}>
+        <div className={styles['all-job']}>You have applied for the following openings!</div>
+        <div className={styles['all-job']}>
           { summary }
         </div>
         <Footer />
