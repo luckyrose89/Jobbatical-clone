@@ -16,6 +16,7 @@
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js",
     "clean": "rimraf dist",
     "dev": "cross-env NODE_ENV=development node index.js",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint --ext .js --ext .jsx src/",
     "populate-db": "node scripts/populate-db.js",
     "clear-db": "node scripts/clear-db.js",
