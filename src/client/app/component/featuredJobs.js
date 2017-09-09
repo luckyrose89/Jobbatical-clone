@@ -10,7 +10,7 @@ class Featured extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/api/job/featured/9')
+		fetch('/api/job/featured/9')
 	    .then(response => {return response.json()})
 	    .then(json => {
 		    this.setState({
