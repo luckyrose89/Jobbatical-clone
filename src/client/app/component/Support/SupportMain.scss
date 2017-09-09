@@ -1,0 +1,51 @@
+.contact-for-more {
+	padding: 10vh 10vw 5vh 10vw;
+    text-align: center; 
+}
+
+.support {
+    color : #fff;
+	background-color: #9F84BD;
+	height: 95vh;
+    padding-top: 50px;
+    margin-top: 20px;
+
+    background-image: url(../../../../../assets/images/support.svg);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.more-button {
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: #ccafed;
+    font-size: 14px;
+    line-height: 32px;
+    color: black;
+    margin-top: 8px;
+}
+
+.more-email {
+	line-height: 32px;
+	padding-left: 4px;
+}
+
+.support-title {
+	font-size: 48px;
+    margin: 10px auto 30px auto;
+}
+
+.support-content {
+	font-size: 1.4em;
+}
+
+.support-content-detail {
+	font-size: 1em;
+}
+
+@media(max-width: 776px){
+    .support {
+        height: 110vh
+    }
+}

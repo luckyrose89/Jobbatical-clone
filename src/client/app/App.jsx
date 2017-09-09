@@ -28,6 +28,7 @@ import {
   SavedJobs,
   AppliedJobs,
   Testimonial,
+  SupportMain,
 } from './component';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/saved-jobs" component={SavedJobs} />
         <Route path="/applied-jobs" component={AppliedJobs} />
         <Route path="/testimonial" component={Testimonial} />
+        <Route path="/support" component={SupportMain} />
         <Route path="/" component={Landing} />
         <Redirect to="/example" />
       </Switch>

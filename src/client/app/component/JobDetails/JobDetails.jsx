@@ -13,6 +13,7 @@ import {
   fetchJobsIfNeeded,
   saveJobStart,
   saveJobRequest,
+  moreInfo,
 } from '../../action';
 
 export class JobDetails extends React.Component {
@@ -20,6 +21,7 @@ export class JobDetails extends React.Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.saveJob = this.saveJob.bind(this);
+    this.joinMailing = this.joinMailing.bind(this);
     this.links = [
       { hash: '#job-details-summary', title: 'Role Summary' },
       { hash: '#job-details-responsibilities', title: 'Responsibilities' },
@@ -90,6 +92,22 @@ export class JobDetails extends React.Component {
       this.lastEl.getBoundingClientRect().bottom < window.innerHeight;
   }
 
+  joinMailing() {
+    var inputEmail;
+    var userEmail = prompt("Please enter your email:", "user@email.com");
+    if (userEmail == null || userEmail == "" || userEmail == " ") {
+        inputEmail = "No Email Entered.";
+    } else {
+        inputEmail = userEmail;
+    }
+    var requestValue = {
+      'email': inputEmail,
+      'inquiry':'notifications'
+    }
+    console.log(requestValue);
+    moreInfo(requestValue)
+  }
+
   saveJob() {
     if (!this.props.user) {
       const url = this.props.match.url;
@@ -105,6 +123,7 @@ export class JobDetails extends React.Component {
     }
 
     let body;
+    let script;
     if (!this.props.job && this.props.isFetching) {
       body = <Loader />;
     } else {
@@ -173,7 +192,7 @@ export class JobDetails extends React.Component {
             >
               <h3 className={styles.name}>{job.name}</h3>
               {applyNow}
-              <p className={styles.share}>Know someone who would be perfect for this job? Share the link: (put some links here)</p>
+              <p className={styles.share}>Know someone who would be perfect for this job? Share this opening: </p><span className="addthis_inline_share_toolbox"></span>
             </div>
 
             <div className={styles.card}>
@@ -252,7 +271,7 @@ export class JobDetails extends React.Component {
                 &mdash; sign up for our weekly notifications about new
                 jobs. No spam, we promise.
               </p>
-              <button className={'btn btn-default ' + styles['join-btn']}>
+              <button className={'btn btn-default ' + styles['join-btn']} onClick={this.joinMailing}>
                 JOIN NOW
               </button>
               {applyNow}
@@ -267,6 +286,8 @@ export class JobDetails extends React.Component {
         <Header />
         <div className={styles.detail}>
           {body}
+          }
+        }
         </div>
         <Footer />
       </div>
@@ -306,6 +327,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(saveJobStart());
     return dispatch(saveJobRequest(user, jobID));
   },
+  moreInfo: (values) => dispatch(moreInfo(values)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(JobDetails);
