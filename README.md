@@ -4,7 +4,8 @@ Clone the [jobbatical](https://jobbatical.com/) website as part of [Chingu Voyag
 The MERN stack (MongoDB, Express, React, Node) is used for this project with hot reloading enabled for both client side and server side modules in development
 
 ## Demo
-Coming soon
+Check out our live website
+[JobsOnTheGo](https://jobsonthego.herokuapp.com/)
 
 ## Development
 
