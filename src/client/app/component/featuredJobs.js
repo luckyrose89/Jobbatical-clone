@@ -19,7 +19,7 @@ class Featured extends Component {
 	}
 	render() {
 		var date;
-		const items = this.state.data.map(item => (
+		const items = this.state.data.map((item) => {
 						<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4" key={item._id.toString()}>
 							<Link to={"/job/" + item._id }>
 								<div className="jobCard">
@@ -39,7 +39,7 @@ class Featured extends Component {
 								</div>
 							</Link>
 						</div>
-						));
+		});
 
 		return (
 			<section className="featured-jobs">
